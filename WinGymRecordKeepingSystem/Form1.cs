@@ -16,5 +16,11 @@ namespace WinGymRecordKeepingSystem
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            frmUsers frmUsers = new frmUsers();
+            frmUsers.Show();
+        }
     }
 }
