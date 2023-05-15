@@ -19,8 +19,8 @@ namespace WinGymRecordKeepingSystem
 
         private void LoadDummyData()
         {
-            gvMembers.Rows.Add("Faraz", "Jahangir", "0321-212121", "42001-3423232");
-            gvMembers.Rows.Add("Ashar", "Khalid", "0321-212121", "42001-3423232");
+            gvMembers.Rows.Add("AB-10023", "Faraz", "Jahangir", "0321-212121", "42001-3423232", "jahangirfaraz98@gmail.com");
+            gvMembers.Rows.Add("AB-22212", "Ashar", "Khalid", "0321-212121", "42001-3423232");
 
         }
 
