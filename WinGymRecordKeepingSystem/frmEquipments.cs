@@ -10,18 +10,24 @@ using System.Windows.Forms;
 
 namespace WinGymRecordKeepingSystem
 {
-    public partial class Form1 : Form
+    public partial class frmEquipments : Form
     {
-        public Form1()
+        public frmEquipments()
         {
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void frmEquipments_Load(object sender, EventArgs e)
+        {
+            gvEquipments.Rows.Add("Dumbell", 3, 3);
+            gvEquipments.Rows.Add("Butterfly", null, 2);
+        }
+
+        private void btnMembers_Click(object sender, EventArgs e)
         {
             frmUsers frmUsers = new frmUsers();
-            frmUsers.Show();
             this.Hide();
+            frmUsers.Show();
         }
     }
 }

@@ -33,15 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvMembers = new System.Windows.Forms.DataGridView();
+            this.regNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEquipments = new System.Windows.Forms.Button();
+            this.btnMembers = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddNew = new System.Windows.Forms.Button();
-            this.btnMembers = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvMembers)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,10 +68,12 @@
             this.gvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gvMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.regNo,
             this.firstName,
             this.lastName,
             this.contact,
-            this.nic});
+            this.nic,
+            this.email});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,7 +84,7 @@
             this.gvMembers.DefaultCellStyle = dataGridViewCellStyle3;
             this.gvMembers.Enabled = false;
             this.gvMembers.GridColor = System.Drawing.Color.LightGray;
-            this.gvMembers.Location = new System.Drawing.Point(183, 71);
+            this.gvMembers.Location = new System.Drawing.Point(160, 71);
             this.gvMembers.Name = "gvMembers";
             this.gvMembers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -91,8 +95,14 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvMembers.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.gvMembers.Size = new System.Drawing.Size(585, 344);
+            this.gvMembers.Size = new System.Drawing.Size(774, 344);
             this.gvMembers.TabIndex = 0;
+            // 
+            // regNo
+            // 
+            this.regNo.HeaderText = "Registeration No";
+            this.regNo.Name = "regNo";
+            this.regNo.Width = 110;
             // 
             // firstName
             // 
@@ -113,16 +123,50 @@
             // 
             this.nic.HeaderText = "Nic";
             this.nic.Name = "nic";
+            this.nic.Width = 120;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.Width = 180;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
+            this.panel1.Controls.Add(this.btnEquipments);
             this.panel1.Controls.Add(this.btnMembers);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(172, 453);
+            this.panel1.Size = new System.Drawing.Size(154, 453);
             this.panel1.TabIndex = 1;
+            // 
+            // btnEquipments
+            // 
+            this.btnEquipments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnEquipments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEquipments.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEquipments.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEquipments.Location = new System.Drawing.Point(12, 71);
+            this.btnEquipments.Name = "btnEquipments";
+            this.btnEquipments.Size = new System.Drawing.Size(124, 30);
+            this.btnEquipments.TabIndex = 9;
+            this.btnEquipments.Text = "Equpiments";
+            this.btnEquipments.UseVisualStyleBackColor = false;
+            this.btnEquipments.Click += new System.EventHandler(this.btnEquipments_Click);
+            // 
+            // btnMembers
+            // 
+            this.btnMembers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMembers.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMembers.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMembers.Location = new System.Drawing.Point(12, 23);
+            this.btnMembers.Name = "btnMembers";
+            this.btnMembers.Size = new System.Drawing.Size(124, 30);
+            this.btnMembers.TabIndex = 8;
+            this.btnMembers.Text = "Members";
+            this.btnMembers.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -136,48 +180,22 @@
             // 
             // btnAddNew
             // 
-            this.btnAddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.btnAddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
             this.btnAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddNew.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddNew.Location = new System.Drawing.Point(681, 27);
+            this.btnAddNew.Location = new System.Drawing.Point(832, 27);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(87, 26);
             this.btnAddNew.TabIndex = 7;
             this.btnAddNew.Text = "Add New";
             this.btnAddNew.UseVisualStyleBackColor = false;
             // 
-            // btnMembers
-            // 
-            this.btnMembers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
-            this.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMembers.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMembers.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMembers.Location = new System.Drawing.Point(24, 23);
-            this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Size = new System.Drawing.Size(124, 30);
-            this.btnMembers.TabIndex = 8;
-            this.btnMembers.Text = "Members";
-            this.btnMembers.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(82)))), ((int)(((byte)(221)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(24, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 30);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Equpiments";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(946, 450);
             this.Controls.Add(this.btnAddNew);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -195,14 +213,16 @@
         #endregion
 
         private System.Windows.Forms.DataGridView gvMembers;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAddNew;
+        private System.Windows.Forms.Button btnEquipments;
+        private System.Windows.Forms.Button btnMembers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn regNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn contact;
         private System.Windows.Forms.DataGridViewTextBoxColumn nic;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAddNew;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnMembers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
     }
 }
