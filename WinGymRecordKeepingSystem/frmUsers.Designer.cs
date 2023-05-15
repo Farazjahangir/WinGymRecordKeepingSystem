@@ -33,17 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvMembers = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnMembers = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAddNew = new System.Windows.Forms.Button();
             this.regNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEquipments = new System.Windows.Forms.Button();
+            this.btnMembers = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAddNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvMembers)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -98,28 +98,62 @@
             this.gvMembers.Size = new System.Drawing.Size(774, 344);
             this.gvMembers.TabIndex = 0;
             // 
+            // regNo
+            // 
+            this.regNo.HeaderText = "Registeration No";
+            this.regNo.Name = "regNo";
+            this.regNo.Width = 110;
+            // 
+            // firstName
+            // 
+            this.firstName.HeaderText = "First Name";
+            this.firstName.Name = "firstName";
+            // 
+            // lastName
+            // 
+            this.lastName.HeaderText = "Last Name";
+            this.lastName.Name = "lastName";
+            // 
+            // contact
+            // 
+            this.contact.HeaderText = "Contact";
+            this.contact.Name = "contact";
+            // 
+            // nic
+            // 
+            this.nic.HeaderText = "Nic";
+            this.nic.Name = "nic";
+            this.nic.Width = 120;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.Width = 180;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnEquipments);
             this.panel1.Controls.Add(this.btnMembers);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(154, 453);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // btnEquipments
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(12, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 30);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Equpiments";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEquipments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnEquipments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEquipments.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEquipments.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEquipments.Location = new System.Drawing.Point(12, 71);
+            this.btnEquipments.Name = "btnEquipments";
+            this.btnEquipments.Size = new System.Drawing.Size(124, 30);
+            this.btnEquipments.TabIndex = 9;
+            this.btnEquipments.Text = "Equpiments";
+            this.btnEquipments.UseVisualStyleBackColor = false;
+            this.btnEquipments.Click += new System.EventHandler(this.btnEquipments_Click);
             // 
             // btnMembers
             // 
@@ -157,39 +191,6 @@
             this.btnAddNew.Text = "Add New";
             this.btnAddNew.UseVisualStyleBackColor = false;
             // 
-            // regNo
-            // 
-            this.regNo.HeaderText = "Registeration No";
-            this.regNo.Name = "regNo";
-            this.regNo.Width = 110;
-            // 
-            // firstName
-            // 
-            this.firstName.HeaderText = "First Name";
-            this.firstName.Name = "firstName";
-            // 
-            // lastName
-            // 
-            this.lastName.HeaderText = "Last Name";
-            this.lastName.Name = "lastName";
-            // 
-            // contact
-            // 
-            this.contact.HeaderText = "Contact";
-            this.contact.Name = "contact";
-            // 
-            // nic
-            // 
-            this.nic.HeaderText = "Nic";
-            this.nic.Name = "nic";
-            this.nic.Width = 120;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.Width = 180;
-            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,7 +216,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddNew;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEquipments;
         private System.Windows.Forms.Button btnMembers;
         private System.Windows.Forms.DataGridViewTextBoxColumn regNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;

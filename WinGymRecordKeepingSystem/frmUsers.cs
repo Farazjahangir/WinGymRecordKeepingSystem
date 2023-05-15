@@ -29,5 +29,12 @@ namespace WinGymRecordKeepingSystem
             LoadDummyData();
 
         }
+
+        private void btnEquipments_Click(object sender, EventArgs e)
+        {
+            frmEquipments frmEquipments = new frmEquipments();
+            this.Hide();
+            frmEquipments.Show();
+        }
     }
 }
