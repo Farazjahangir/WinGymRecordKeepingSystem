@@ -52,6 +52,12 @@
     <Compile Include="frmAddEquipment.Designer.cs">
       <DependentUpon>frmAddEquipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAdmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmission.Designer.cs">
+      <DependentUpon>frmAdmission.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
