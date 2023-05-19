@@ -190,6 +190,7 @@
             this.btnAddNew.TabIndex = 7;
             this.btnAddNew.Text = "Add New";
             this.btnAddNew.UseVisualStyleBackColor = false;
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // frmUsers
             // 

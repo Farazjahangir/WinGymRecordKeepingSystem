@@ -81,6 +81,9 @@
     <EmbeddedResource Include="frmAddEquipment.resx">
       <DependentUpon>frmAddEquipment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmission.resx">
+      <DependentUpon>frmAdmission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
