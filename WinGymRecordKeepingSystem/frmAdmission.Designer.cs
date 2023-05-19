@@ -40,15 +40,17 @@
             this.mtbContact = new System.Windows.Forms.MaskedTextBox();
             this.mtbNic = new System.Windows.Forms.MaskedTextBox();
             this.btnsubmit = new System.Windows.Forms.Button();
+            this.pnAdmission = new System.Windows.Forms.Panel();
+            this.pnAdmission.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAdmissonFrom
             // 
             this.lblAdmissonFrom.AutoSize = true;
-            this.lblAdmissonFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmissonFrom.Location = new System.Drawing.Point(86, 43);
+            this.lblAdmissonFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmissonFrom.Location = new System.Drawing.Point(142, 19);
             this.lblAdmissonFrom.Name = "lblAdmissonFrom";
-            this.lblAdmissonFrom.Size = new System.Drawing.Size(257, 37);
+            this.lblAdmissonFrom.Size = new System.Drawing.Size(291, 42);
             this.lblAdmissonFrom.TabIndex = 0;
             this.lblAdmissonFrom.Text = "Admisson Form";
             // 
@@ -56,7 +58,7 @@
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(50, 97);
+            this.lblFirstName.Location = new System.Drawing.Point(15, 93);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(92, 20);
             this.lblFirstName.TabIndex = 1;
@@ -66,7 +68,7 @@
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(50, 139);
+            this.lblLastName.Location = new System.Drawing.Point(15, 138);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(92, 20);
             this.lblLastName.TabIndex = 2;
@@ -76,7 +78,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(51, 212);
+            this.lblEmail.Location = new System.Drawing.Point(15, 175);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(48, 20);
             this.lblEmail.TabIndex = 3;
@@ -84,30 +86,30 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(179, 97);
+            this.txtFirstName.Location = new System.Drawing.Point(124, 93);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(200, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(275, 20);
             this.txtFirstName.TabIndex = 4;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(179, 212);
+            this.txtEmail.Location = new System.Drawing.Point(124, 177);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 20);
+            this.txtEmail.Size = new System.Drawing.Size(275, 20);
             this.txtEmail.TabIndex = 5;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(179, 139);
+            this.txtLastName.Location = new System.Drawing.Point(124, 138);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(200, 20);
+            this.txtLastName.Size = new System.Drawing.Size(275, 20);
             this.txtLastName.TabIndex = 6;
             // 
             // lblContact
             // 
             this.lblContact.AutoSize = true;
             this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContact.Location = new System.Drawing.Point(51, 174);
+            this.lblContact.Location = new System.Drawing.Point(15, 207);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(71, 20);
             this.lblContact.TabIndex = 7;
@@ -117,7 +119,7 @@
             // 
             this.lblNic.AutoSize = true;
             this.lblNic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNic.Location = new System.Drawing.Point(51, 245);
+            this.lblNic.Location = new System.Drawing.Point(15, 247);
             this.lblNic.Name = "lblNic";
             this.lblNic.Size = new System.Drawing.Size(37, 20);
             this.lblNic.TabIndex = 8;
@@ -125,7 +127,7 @@
             // 
             // mtbContact
             // 
-            this.mtbContact.Location = new System.Drawing.Point(179, 176);
+            this.mtbContact.Location = new System.Drawing.Point(124, 209);
             this.mtbContact.Mask = "0000-0000000";
             this.mtbContact.Name = "mtbContact";
             this.mtbContact.Size = new System.Drawing.Size(130, 20);
@@ -133,7 +135,7 @@
             // 
             // mtbNic
             // 
-            this.mtbNic.Location = new System.Drawing.Point(179, 247);
+            this.mtbNic.Location = new System.Drawing.Point(124, 247);
             this.mtbNic.Mask = "00000-0000000-0";
             this.mtbNic.Name = "mtbNic";
             this.mtbNic.Size = new System.Drawing.Size(130, 20);
@@ -145,34 +147,45 @@
             this.btnsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsubmit.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnsubmit.Location = new System.Drawing.Point(158, 300);
+            this.btnsubmit.Location = new System.Drawing.Point(124, 291);
             this.btnsubmit.Name = "btnsubmit";
-            this.btnsubmit.Size = new System.Drawing.Size(75, 28);
+            this.btnsubmit.Size = new System.Drawing.Size(200, 28);
             this.btnsubmit.TabIndex = 11;
             this.btnsubmit.Text = "Submit";
             this.btnsubmit.UseVisualStyleBackColor = false;
+            // 
+            // pnAdmission
+            // 
+            this.pnAdmission.Controls.Add(this.btnsubmit);
+            this.pnAdmission.Controls.Add(this.lblContact);
+            this.pnAdmission.Controls.Add(this.mtbNic);
+            this.pnAdmission.Controls.Add(this.lblFirstName);
+            this.pnAdmission.Controls.Add(this.lblNic);
+            this.pnAdmission.Controls.Add(this.mtbContact);
+            this.pnAdmission.Controls.Add(this.lblAdmissonFrom);
+            this.pnAdmission.Controls.Add(this.lblLastName);
+            this.pnAdmission.Controls.Add(this.txtFirstName);
+            this.pnAdmission.Controls.Add(this.txtLastName);
+            this.pnAdmission.Controls.Add(this.txtEmail);
+            this.pnAdmission.Controls.Add(this.lblEmail);
+            this.pnAdmission.Location = new System.Drawing.Point(80, 13);
+            this.pnAdmission.Name = "pnAdmission";
+            this.pnAdmission.Size = new System.Drawing.Size(568, 391);
+            this.pnAdmission.TabIndex = 13;
             // 
             // frmAdmission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 450);
-            this.Controls.Add(this.btnsubmit);
-            this.Controls.Add(this.mtbNic);
-            this.Controls.Add(this.mtbContact);
-            this.Controls.Add(this.lblNic);
-            this.Controls.Add(this.lblContact);
-            this.Controls.Add(this.txtLastName);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtFirstName);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.lblFirstName);
-            this.Controls.Add(this.lblAdmissonFrom);
+            this.ClientSize = new System.Drawing.Size(834, 450);
+            this.ControlBox = false;
+            this.Controls.Add(this.pnAdmission);
             this.Name = "frmAdmission";
-            this.Text = "frmAdmission";
+            this.Text = "Admission From";
+            this.SizeChanged += new System.EventHandler(this.frmAdmission_SizeChanged);
+            this.pnAdmission.ResumeLayout(false);
+            this.pnAdmission.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -190,5 +203,6 @@
         private System.Windows.Forms.MaskedTextBox mtbContact;
         private System.Windows.Forms.MaskedTextBox mtbNic;
         private System.Windows.Forms.Button btnsubmit;
+        private System.Windows.Forms.Panel pnAdmission;
     }
 }

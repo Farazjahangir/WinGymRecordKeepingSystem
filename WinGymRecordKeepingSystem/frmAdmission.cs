@@ -16,5 +16,11 @@ namespace WinGymRecordKeepingSystem
         {
             InitializeComponent();
         }
+
+        private void frmAdmission_SizeChanged(object sender, EventArgs e)
+        {
+            pnAdmission.Left = (this.ClientSize.Width - pnAdmission.Width) / 2;
+            pnAdmission.Top = (this.ClientSize.Height - pnAdmission.Height) / 2;
+        }
     }
 }

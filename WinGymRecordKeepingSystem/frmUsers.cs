@@ -29,23 +29,13 @@ namespace WinGymRecordKeepingSystem
 
         }
 
-        private void btnEquipments_Click(object sender, EventArgs e)
-        {
-            frmEquipments frmEquipments = new frmEquipments();
-            this.Hide();
-            frmEquipments.Show();
-        }
-
         private void btnAddNew_Click(object sender, EventArgs e)
         {
             frmAdmission frmAdmission = new frmAdmission();
+            frmAdmission.MdiParent = this.MdiParent;
             this.Hide();
+            frmAdmission.WindowState = FormWindowState.Maximized;
             frmAdmission.Show();
-        }
-
-        private void frmUsers_SizeChanged(object sender, EventArgs e)
-        {
-        
         }
     }
 }
