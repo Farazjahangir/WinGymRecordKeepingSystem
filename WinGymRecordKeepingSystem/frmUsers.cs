@@ -21,7 +21,6 @@ namespace WinGymRecordKeepingSystem
         {
             gvMembers.Rows.Add("AB-10023", "Faraz", "Jahangir", "0321-212121", "42001-3423232", "jahangirfaraz98@gmail.com");
             gvMembers.Rows.Add("AB-22212", "Ashar", "Khalid", "0321-212121", "42001-3423232");
-
         }
 
         private void frmUsers_Load(object sender, EventArgs e)
@@ -42,6 +41,11 @@ namespace WinGymRecordKeepingSystem
             frmAdmission frmAdmission = new frmAdmission();
             this.Hide();
             frmAdmission.Show();
+        }
+
+        private void frmUsers_SizeChanged(object sender, EventArgs e)
+        {
+        
         }
     }
 }

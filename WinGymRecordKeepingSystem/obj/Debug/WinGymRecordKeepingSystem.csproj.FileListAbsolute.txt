@@ -12,3 +12,5 @@ F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRec
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.exe
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.pdb
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.csproj.AssemblyReference.cache
+F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.frmAdmission.resources
+F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.MDIParent.resources
