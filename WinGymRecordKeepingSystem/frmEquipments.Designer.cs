@@ -113,9 +113,9 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gvEquipments.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gvEquipments.Enabled = false;
             this.gvEquipments.GridColor = System.Drawing.Color.LightGray;
             this.gvEquipments.Location = new System.Drawing.Point(162, 71);
+            this.gvEquipments.MultiSelect = false;
             this.gvEquipments.Name = "gvEquipments";
             this.gvEquipments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -128,6 +128,7 @@
             this.gvEquipments.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gvEquipments.Size = new System.Drawing.Size(396, 344);
             this.gvEquipments.TabIndex = 3;
+            this.gvEquipments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvEquipments_CellClick);
             // 
             // name
             // 
@@ -173,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 450);
+            this.ClientSize = new System.Drawing.Size(579, 450);
             this.Controls.Add(this.btnAddNew);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gvEquipments);

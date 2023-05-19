@@ -36,5 +36,18 @@ namespace WinGymRecordKeepingSystem
             this.Hide();
             frmAddEquipment.Show();
         }
+
+        private void gvEquipments_SelectionChanged(object sender, EventArgs e)
+        {
+            System.Console.WriteLine("SELECTION =====>");
+        }
+
+        private void gvEquipments_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCellCollection cell = gvEquipments.SelectedRows[0].Cells;
+            frmAddEquipment frmAddEquipment = new frmAddEquipment();
+            frmAddEquipment.loadData(cell);
+            frmAddEquipment.Show();
+        }
     }
 }

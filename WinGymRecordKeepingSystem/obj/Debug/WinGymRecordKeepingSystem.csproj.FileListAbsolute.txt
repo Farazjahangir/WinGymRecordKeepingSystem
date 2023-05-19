@@ -1,5 +1,6 @@
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\bin\Debug\WinGymRecordKeepingSystem.exe
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\bin\Debug\WinGymRecordKeepingSystem.exe.config
+F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\bin\Debug\WinGymRecordKeepingSystem.pdb
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.csproj.SuggestedBindingRedirects.cache
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.frmAddEquipment.resources
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.frmLogin.resources
@@ -10,4 +11,4 @@ F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRec
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.csproj.CoreCompileInputs.cache
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.exe
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.pdb
-F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\bin\Debug\WinGymRecordKeepingSystem.pdb
+F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.csproj.AssemblyReference.cache

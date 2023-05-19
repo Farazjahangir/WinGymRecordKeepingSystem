@@ -16,5 +16,10 @@ namespace WinGymRecordKeepingSystem
         {
             InitializeComponent();
         }
+
+        public void loadData(DataGridViewCellCollection data)
+        {
+            txtName.Text = data["name"].Value.ToString();
+        }
     }
 }
