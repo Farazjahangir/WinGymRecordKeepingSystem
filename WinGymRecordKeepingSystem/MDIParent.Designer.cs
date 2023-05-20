@@ -33,11 +33,11 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnMdiParent = new System.Windows.Forms.Panel();
             this.btnEquipments = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnMdiParent.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -64,16 +64,16 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // panel1
+            // pnMdiParent
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
-            this.panel1.Controls.Add(this.btnEquipments);
-            this.panel1.Controls.Add(this.btnMembers);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(217, 432);
-            this.panel1.TabIndex = 4;
+            this.pnMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
+            this.pnMdiParent.Controls.Add(this.btnEquipments);
+            this.pnMdiParent.Controls.Add(this.btnMembers);
+            this.pnMdiParent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnMdiParent.Location = new System.Drawing.Point(0, 24);
+            this.pnMdiParent.Name = "pnMdiParent";
+            this.pnMdiParent.Size = new System.Drawing.Size(217, 432);
+            this.pnMdiParent.TabIndex = 4;
             // 
             // btnEquipments
             // 
@@ -87,6 +87,7 @@
             this.btnEquipments.TabIndex = 9;
             this.btnEquipments.Text = "Equpiments";
             this.btnEquipments.UseVisualStyleBackColor = false;
+            this.btnEquipments.Click += new System.EventHandler(this.btnEquipments_Click);
             // 
             // btnMembers
             // 
@@ -106,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 478);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnMdiParent);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
@@ -115,9 +116,10 @@
             this.Text = "Gym Record Keeping System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MDIParent_Load);
+            this.MdiChildActivate += new System.EventHandler(this.MDIParent_MdiChildActivate);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.pnMdiParent.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,7 +131,7 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnMdiParent;
         private System.Windows.Forms.Button btnEquipments;
         private System.Windows.Forms.Button btnMembers;
     }

@@ -19,7 +19,6 @@ namespace WinGymRecordKeepingSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
- 
             frmUsers frmUsers = new frmUsers();
             frmUsers.MdiParent = this.MdiParent;
             frmUsers.Show();
