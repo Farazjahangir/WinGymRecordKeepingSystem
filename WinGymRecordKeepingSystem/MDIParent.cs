@@ -44,5 +44,13 @@ namespace WinGymRecordKeepingSystem
                 pnMdiParent.Visible = true;
             }
         }
+
+        private void btnMembers_Click(object sender, EventArgs e)
+        {
+            frmUsers frmUsers = new frmUsers();
+            frmUsers.MdiParent = this;
+            frmUsers.Show();
+            frmUsers.WindowState = FormWindowState.Maximized;
+        }
     }
 }

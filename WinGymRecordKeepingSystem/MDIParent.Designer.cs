@@ -101,6 +101,7 @@
             this.btnMembers.TabIndex = 8;
             this.btnMembers.Text = "Members";
             this.btnMembers.UseVisualStyleBackColor = false;
+            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
             // MDIParent
             // 

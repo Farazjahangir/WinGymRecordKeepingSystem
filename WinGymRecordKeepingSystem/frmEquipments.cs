@@ -33,7 +33,9 @@ namespace WinGymRecordKeepingSystem
         private void btnAddNew_Click(object sender, EventArgs e)
         {
             frmAddEquipment frmAddEquipment = new frmAddEquipment();
+            frmAddEquipment.MdiParent = this.MdiParent;
             this.Hide();
+            frmAddEquipment.WindowState = FormWindowState.Maximized;
             frmAddEquipment.Show();
         }
 
