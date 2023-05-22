@@ -184,7 +184,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmEquipments";
-            this.Text = "frmEquipments";
+            this.Text = "Equipments";
             this.Load += new System.EventHandler(this.frmEquipments_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
