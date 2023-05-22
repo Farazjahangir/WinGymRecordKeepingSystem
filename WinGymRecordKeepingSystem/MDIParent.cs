@@ -52,5 +52,13 @@ namespace WinGymRecordKeepingSystem
             frmUsers.Show();
             frmUsers.WindowState = FormWindowState.Maximized;
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.MdiParent = this;
+            frmLogin.Show();
+            frmLogin.WindowState = FormWindowState.Maximized;
+        }
     }
 }
