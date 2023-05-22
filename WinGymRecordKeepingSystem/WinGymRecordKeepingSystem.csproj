@@ -52,6 +52,12 @@
     <Compile Include="frmAddEquipment.Designer.cs">
       <DependentUpon>frmAddEquipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddTrainer.Designer.cs">
+      <DependentUpon>frmAddTrainer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdmission.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     <Compile Include="frmEquipments.Designer.cs">
       <DependentUpon>frmEquipments.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTrainers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTrainers.Designer.cs">
+      <DependentUpon>FrmTrainers.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,9 @@
     <EmbeddedResource Include="frmAddEquipment.resx">
       <DependentUpon>frmAddEquipment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddTrainer.resx">
+      <DependentUpon>frmAddTrainer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdmission.resx">
       <DependentUpon>frmAdmission.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEquipments.resx">
       <DependentUpon>frmEquipments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTrainers.resx">
+      <DependentUpon>FrmTrainers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>

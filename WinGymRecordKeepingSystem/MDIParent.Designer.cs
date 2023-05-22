@@ -34,9 +34,10 @@
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pnMdiParent = new System.Windows.Forms.Panel();
+            this.btnTrainer = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btnEquipments = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.pnMdiParent.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +69,7 @@
             // pnMdiParent
             // 
             this.pnMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
+            this.pnMdiParent.Controls.Add(this.btnTrainer);
             this.pnMdiParent.Controls.Add(this.btnLogout);
             this.pnMdiParent.Controls.Add(this.btnEquipments);
             this.pnMdiParent.Controls.Add(this.btnMembers);
@@ -76,6 +78,34 @@
             this.pnMdiParent.Name = "pnMdiParent";
             this.pnMdiParent.Size = new System.Drawing.Size(217, 432);
             this.pnMdiParent.TabIndex = 4;
+            // 
+            // btnTrainer
+            // 
+            this.btnTrainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnTrainer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTrainer.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrainer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTrainer.Location = new System.Drawing.Point(45, 112);
+            this.btnTrainer.Name = "btnTrainer";
+            this.btnTrainer.Size = new System.Drawing.Size(124, 30);
+            this.btnTrainer.TabIndex = 11;
+            this.btnTrainer.Text = "Trainers";
+            this.btnTrainer.UseVisualStyleBackColor = false;
+            this.btnTrainer.Click += new System.EventHandler(this.btnTrainer_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogout.Location = new System.Drawing.Point(45, 158);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(124, 30);
+            this.btnLogout.TabIndex = 10;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnEquipments
             // 
@@ -104,20 +134,6 @@
             this.btnMembers.Text = "Members";
             this.btnMembers.UseVisualStyleBackColor = false;
             this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogout.Location = new System.Drawing.Point(45, 112);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(124, 30);
-            this.btnLogout.TabIndex = 10;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // MDIParent
             // 
@@ -152,6 +168,7 @@
         private System.Windows.Forms.Button btnEquipments;
         private System.Windows.Forms.Button btnMembers;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnTrainer;
     }
 }
 
