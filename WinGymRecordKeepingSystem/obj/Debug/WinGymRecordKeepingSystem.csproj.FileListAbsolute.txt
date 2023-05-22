@@ -13,3 +13,5 @@ F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRec
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.csproj.CoreCompileInputs.cache
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.exe
 F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.pdb
+F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.csproj.AssemblyReference.cache
+F:\Faraz\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.frmCollectFee.resources

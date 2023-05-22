@@ -58,6 +58,12 @@
     <Compile Include="frmAdmission.Designer.cs">
       <DependentUpon>frmAdmission.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCollectFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCollectFee.Designer.cs">
+      <DependentUpon>frmCollectFee.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdmission.resx">
       <DependentUpon>frmAdmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCollectFee.resx">
+      <DependentUpon>frmCollectFee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
