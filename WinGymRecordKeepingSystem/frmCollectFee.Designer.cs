@@ -29,48 +29,140 @@
         private void InitializeComponent()
         {
             this.pnCollectFee = new System.Windows.Forms.Panel();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.cmbName = new System.Windows.Forms.ComboBox();
+            this.mtbNic = new System.Windows.Forms.MaskedTextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnCollect = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtFee = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.pnCollectFee.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnCollectFee
             // 
-            this.pnCollectFee.Controls.Add(this.dtpDate);
-            this.pnCollectFee.Controls.Add(this.cmbName);
+            this.pnCollectFee.Controls.Add(this.mtbNic);
+            this.pnCollectFee.Controls.Add(this.textBox4);
+            this.pnCollectFee.Controls.Add(this.textBox3);
+            this.pnCollectFee.Controls.Add(this.textBox2);
+            this.pnCollectFee.Controls.Add(this.label6);
+            this.pnCollectFee.Controls.Add(this.label5);
+            this.pnCollectFee.Controls.Add(this.label4);
+            this.pnCollectFee.Controls.Add(this.label3);
+            this.pnCollectFee.Controls.Add(this.btnSearch);
+            this.pnCollectFee.Controls.Add(this.label2);
+            this.pnCollectFee.Controls.Add(this.textBox1);
             this.pnCollectFee.Controls.Add(this.btnCollect);
             this.pnCollectFee.Controls.Add(this.label1);
-            this.pnCollectFee.Controls.Add(this.label3);
-            this.pnCollectFee.Controls.Add(this.label2);
-            this.pnCollectFee.Controls.Add(this.txtFee);
-            this.pnCollectFee.Controls.Add(this.label4);
-            this.pnCollectFee.Location = new System.Drawing.Point(213, 30);
+            this.pnCollectFee.Location = new System.Drawing.Point(47, 12);
             this.pnCollectFee.Name = "pnCollectFee";
-            this.pnCollectFee.Size = new System.Drawing.Size(374, 391);
+            this.pnCollectFee.Size = new System.Drawing.Size(588, 480);
             this.pnCollectFee.TabIndex = 15;
             // 
-            // dtpDate
+            // mtbNic
             // 
-            this.dtpDate.Enabled = false;
-            this.dtpDate.Location = new System.Drawing.Point(61, 264);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(222, 20);
-            this.dtpDate.TabIndex = 11;
+            this.mtbNic.Location = new System.Drawing.Point(425, 258);
+            this.mtbNic.Mask = "00000-0000000-0";
+            this.mtbNic.Name = "mtbNic";
+            this.mtbNic.Size = new System.Drawing.Size(123, 20);
+            this.mtbNic.TabIndex = 23;
             // 
-            // cmbName
+            // textBox4
             // 
-            this.cmbName.FormattingEnabled = true;
-            this.cmbName.Location = new System.Drawing.Point(61, 131);
-            this.cmbName.Name = "cmbName";
-            this.cmbName.Size = new System.Drawing.Size(222, 21);
-            this.cmbName.TabIndex = 10;
-            this.cmbName.SelectedIndexChanged += new System.EventHandler(this.cmbName_SelectedIndexChanged);
+            this.textBox4.Location = new System.Drawing.Point(425, 316);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(123, 20);
+            this.textBox4.TabIndex = 22;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(126, 316);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(193, 20);
+            this.textBox3.TabIndex = 21;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(126, 258);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(193, 20);
+            this.textBox2.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(382, 316);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 20);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Fee";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(382, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 20);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Nic";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(34, 258);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "First Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(34, 316);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Last Name";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSearch.Location = new System.Drawing.Point(354, 126);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(90, 32);
+            this.btnSearch.TabIndex = 15;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(91, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 20);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Registeration No";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(95, 134);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(224, 20);
+            this.textBox1.TabIndex = 13;
             // 
             // btnCollect
             // 
@@ -78,7 +170,7 @@
             this.btnCollect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCollect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCollect.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCollect.Location = new System.Drawing.Point(59, 307);
+            this.btnCollect.Location = new System.Drawing.Point(186, 377);
             this.btnCollect.Name = "btnCollect";
             this.btnCollect.Size = new System.Drawing.Size(224, 31);
             this.btnCollect.TabIndex = 9;
@@ -89,55 +181,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 34);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(191, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 42);
+            this.label1.Size = new System.Drawing.Size(188, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Collect Fee";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(57, 163);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Fee";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Name";
-            // 
-            // txtFee
-            // 
-            this.txtFee.Location = new System.Drawing.Point(59, 195);
-            this.txtFee.Name = "txtFee";
-            this.txtFee.Size = new System.Drawing.Size(224, 20);
-            this.txtFee.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(57, 229);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Date";
             // 
             // frmCollectFee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 504);
             this.ControlBox = false;
             this.Controls.Add(this.pnCollectFee);
             this.Name = "frmCollectFee";
@@ -152,13 +207,18 @@
         #endregion
 
         private System.Windows.Forms.Panel pnCollectFee;
-        private System.Windows.Forms.DateTimePicker dtpDate;
-        private System.Windows.Forms.ComboBox cmbName;
         private System.Windows.Forms.Button btnCollect;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtFee;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MaskedTextBox mtbNic;
     }
 }

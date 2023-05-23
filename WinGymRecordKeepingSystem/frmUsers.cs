@@ -12,7 +12,6 @@ namespace WinGymRecordKeepingSystem
 {
     public partial class frmUsers : Form
     {
-        int selectedMemberId;
         public frmUsers()
         {
             InitializeComponent();
@@ -41,21 +40,9 @@ namespace WinGymRecordKeepingSystem
             frmAdmission.Show();
         }
 
-        private void btnCollectFee_Click(object sender, EventArgs e)
-        {
-            frmCollectFee frmCollectFee = new frmCollectFee();
-            frmCollectFee.MdiParent = this.MdiParent;
-            frmCollectFee.getMemberId(selectedMemberId);
-            this.Hide();
-            frmCollectFee.WindowState = FormWindowState.Maximized;
-            frmCollectFee.Show();
-        }
-
         private void gvMembers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewCellCollection cell = gvMembers.SelectedRows[0].Cells;
-            Console.WriteLine(cell["id"].Value.ToString());
-            selectedMemberId = int.Parse(cell["id"].Value.ToString());
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

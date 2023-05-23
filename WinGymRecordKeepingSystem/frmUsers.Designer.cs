@@ -42,7 +42,6 @@
             this.btnAddNew = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnCollectFee = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvMembers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -174,7 +173,6 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.btnCollectFee);
             this.splitContainer1.Panel1.Controls.Add(this.btnEdit);
             this.splitContainer1.Panel1.Controls.Add(this.btnAddNew);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
@@ -185,20 +183,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(1041, 450);
             this.splitContainer1.SplitterDistance = 103;
             this.splitContainer1.TabIndex = 10;
-            // 
-            // btnCollectFee
-            // 
-            this.btnCollectFee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
-            this.btnCollectFee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCollectFee.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCollectFee.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCollectFee.Location = new System.Drawing.Point(226, 63);
-            this.btnCollectFee.Name = "btnCollectFee";
-            this.btnCollectFee.Size = new System.Drawing.Size(119, 26);
-            this.btnCollectFee.TabIndex = 9;
-            this.btnCollectFee.Text = "Collect Fee";
-            this.btnCollectFee.UseVisualStyleBackColor = false;
-            this.btnCollectFee.Click += new System.EventHandler(this.btnCollectFee_Click);
             // 
             // btnEdit
             // 
@@ -241,7 +225,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnCollectFee;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastName;

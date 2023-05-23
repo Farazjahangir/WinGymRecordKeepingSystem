@@ -33,12 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvPayments = new System.Windows.Forms.DataGridView();
-            this.lblPayments = new System.Windows.Forms.Label();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.memberName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblPayments = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnCollectFee = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvPayments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -93,37 +94,8 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvPayments.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gvPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvPayments.Size = new System.Drawing.Size(800, 386);
+            this.gvPayments.Size = new System.Drawing.Size(800, 336);
             this.gvPayments.TabIndex = 0;
-            // 
-            // lblPayments
-            // 
-            this.lblPayments.AutoSize = true;
-            this.lblPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPayments.Location = new System.Drawing.Point(12, 9);
-            this.lblPayments.Name = "lblPayments";
-            this.lblPayments.Size = new System.Drawing.Size(145, 33);
-            this.lblPayments.TabIndex = 2;
-            this.lblPayments.Text = "Payments";
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.lblPayments);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.gvPayments);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 60;
-            this.splitContainer1.TabIndex = 13;
             // 
             // id
             // 
@@ -153,6 +125,50 @@
             this.date.HeaderText = "Date";
             this.date.Name = "date";
             // 
+            // lblPayments
+            // 
+            this.lblPayments.AutoSize = true;
+            this.lblPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPayments.Location = new System.Drawing.Point(12, 9);
+            this.lblPayments.Name = "lblPayments";
+            this.lblPayments.Size = new System.Drawing.Size(145, 33);
+            this.lblPayments.TabIndex = 2;
+            this.lblPayments.Text = "Payments";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnCollectFee);
+            this.splitContainer1.Panel1.Controls.Add(this.lblPayments);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.gvPayments);
+            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
+            this.splitContainer1.SplitterDistance = 110;
+            this.splitContainer1.TabIndex = 13;
+            // 
+            // btnCollectFee
+            // 
+            this.btnCollectFee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnCollectFee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCollectFee.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCollectFee.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCollectFee.Location = new System.Drawing.Point(18, 69);
+            this.btnCollectFee.Name = "btnCollectFee";
+            this.btnCollectFee.Size = new System.Drawing.Size(119, 26);
+            this.btnCollectFee.TabIndex = 10;
+            this.btnCollectFee.Text = "Collect Fee";
+            this.btnCollectFee.UseVisualStyleBackColor = false;
+            this.btnCollectFee.Click += new System.EventHandler(this.btnCollectFee_Click);
+            // 
             // frmPayments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,5 +197,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn memberName;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.Button btnCollectFee;
     }
 }

@@ -65,7 +65,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gvTrainers);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 103;
+            this.splitContainer1.SplitterDistance = 104;
             this.splitContainer1.TabIndex = 12;
             // 
             // btnEdit
@@ -151,7 +151,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvTrainers.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gvTrainers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvTrainers.Size = new System.Drawing.Size(800, 343);
+            this.gvTrainers.Size = new System.Drawing.Size(800, 342);
             this.gvTrainers.TabIndex = 0;
             // 
             // name
