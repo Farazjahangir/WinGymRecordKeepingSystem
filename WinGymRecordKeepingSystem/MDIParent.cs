@@ -76,5 +76,7 @@ namespace WinGymRecordKeepingSystem
             frmPayments.Show();
             frmPayments.WindowState = FormWindowState.Maximized;
         }
+
+     
     }
 }
