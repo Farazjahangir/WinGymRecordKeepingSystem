@@ -12,6 +12,7 @@ namespace WinGymRecordKeepingSystem
 {
     public partial class frmUsers : Form
     {
+        int selectedMemberId;
         public frmUsers()
         {
             InitializeComponent();
@@ -19,13 +20,15 @@ namespace WinGymRecordKeepingSystem
 
         private void LoadDummyData()
         {
-            gvMembers.Rows.Add("AB-10023", "Faraz", "Jahangir", "0321-212121", "42001-3423232", "jahangirfaraz98@gmail.com");
-            gvMembers.Rows.Add("AB-22212", "Ashar", "Khalid", "0321-212121", "42001-3423232");
+            gvMembers.Rows.Add(1, "Faraz", "Jahangir", "0321-212121", "42001-3423232", "jahangirfaraz98@gmail.com");
+            gvMembers.Rows.Add(2, "Ashar", "Khalid", "0321-212121", "42001-3423232");
+            gvMembers.Rows.Add(3, "M", "Rehan", "0321-212121", "42001-3423232");
         }
 
         private void frmUsers_Load(object sender, EventArgs e)
         {
             LoadDummyData();
+            gvMembers.CurrentCell.Selected = false;
 
         }
 
@@ -42,9 +45,22 @@ namespace WinGymRecordKeepingSystem
         {
             frmCollectFee frmCollectFee = new frmCollectFee();
             frmCollectFee.MdiParent = this.MdiParent;
+            frmCollectFee.getMemberId(selectedMemberId);
             this.Hide();
             frmCollectFee.WindowState = FormWindowState.Maximized;
             frmCollectFee.Show();
+        }
+
+        private void gvMembers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCellCollection cell = gvMembers.SelectedRows[0].Cells;
+            Console.WriteLine(cell["id"].Value.ToString());
+            selectedMemberId = int.Parse(cell["id"].Value.ToString());
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }

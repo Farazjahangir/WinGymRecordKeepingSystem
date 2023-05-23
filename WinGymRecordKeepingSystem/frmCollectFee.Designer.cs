@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.pnCollectFee = new System.Windows.Forms.Panel();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.cmbName = new System.Windows.Forms.ComboBox();
             this.btnCollect = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFee = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbName = new System.Windows.Forms.ComboBox();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.pnCollectFee.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,23 @@
             this.pnCollectFee.Size = new System.Drawing.Size(374, 391);
             this.pnCollectFee.TabIndex = 15;
             // 
+            // dtpDate
+            // 
+            this.dtpDate.Enabled = false;
+            this.dtpDate.Location = new System.Drawing.Point(61, 264);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(222, 20);
+            this.dtpDate.TabIndex = 11;
+            // 
+            // cmbName
+            // 
+            this.cmbName.FormattingEnabled = true;
+            this.cmbName.Location = new System.Drawing.Point(61, 131);
+            this.cmbName.Name = "cmbName";
+            this.cmbName.Size = new System.Drawing.Size(222, 21);
+            this.cmbName.TabIndex = 10;
+            this.cmbName.SelectedIndexChanged += new System.EventHandler(this.cmbName_SelectedIndexChanged);
+            // 
             // btnCollect
             // 
             this.btnCollect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
@@ -67,6 +84,7 @@
             this.btnCollect.TabIndex = 9;
             this.btnCollect.Text = "Collect";
             this.btnCollect.UseVisualStyleBackColor = false;
+            this.btnCollect.Click += new System.EventHandler(this.btnCollect_Click);
             // 
             // label1
             // 
@@ -114,22 +132,6 @@
             this.label4.Size = new System.Drawing.Size(44, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Date";
-            // 
-            // cmbName
-            // 
-            this.cmbName.FormattingEnabled = true;
-            this.cmbName.Location = new System.Drawing.Point(61, 131);
-            this.cmbName.Name = "cmbName";
-            this.cmbName.Size = new System.Drawing.Size(222, 21);
-            this.cmbName.TabIndex = 10;
-            // 
-            // dtpDate
-            // 
-            this.dtpDate.Enabled = false;
-            this.dtpDate.Location = new System.Drawing.Point(61, 264);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(222, 20);
-            this.dtpDate.TabIndex = 11;
             // 
             // frmCollectFee
             // 

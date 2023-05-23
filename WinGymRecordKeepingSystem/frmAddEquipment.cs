@@ -27,10 +27,5 @@ namespace WinGymRecordKeepingSystem
             pnAddEquipment.Left = (this.ClientSize.Width - pnAddEquipment.Width) / 2;
             pnAddEquipment.Top = (this.ClientSize.Height - pnAddEquipment.Height) / 2;
         }
-
-        private void frmAddEquipment_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
