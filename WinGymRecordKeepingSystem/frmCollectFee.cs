@@ -39,7 +39,7 @@ namespace WinGymRecordKeepingSystem
 
         private void cmbName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedMemberId = int.Parse(cmbName.SelectedValue.ToString());
+            // selectedMemberId = int.Parse(cmbName.SelectedValue.ToString());
         }
 
         private void btnCollect_Click(object sender, EventArgs e)

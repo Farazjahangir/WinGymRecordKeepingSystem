@@ -153,6 +153,7 @@
             this.btnsubmit.TabIndex = 11;
             this.btnsubmit.Text = "Submit";
             this.btnsubmit.UseVisualStyleBackColor = false;
+           
             // 
             // pnAdmission
             // 
