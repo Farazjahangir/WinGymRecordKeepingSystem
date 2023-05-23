@@ -38,6 +38,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnEquipments = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
+            this.btnPayments = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.pnMdiParent.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +70,7 @@
             // pnMdiParent
             // 
             this.pnMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
+            this.pnMdiParent.Controls.Add(this.btnPayments);
             this.pnMdiParent.Controls.Add(this.btnTrainer);
             this.pnMdiParent.Controls.Add(this.btnLogout);
             this.pnMdiParent.Controls.Add(this.btnEquipments);
@@ -99,7 +101,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogout.Location = new System.Drawing.Point(45, 158);
+            this.btnLogout.Location = new System.Drawing.Point(45, 212);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(124, 30);
             this.btnLogout.TabIndex = 10;
@@ -135,6 +137,20 @@
             this.btnMembers.UseVisualStyleBackColor = false;
             this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
+            // btnPayments
+            // 
+            this.btnPayments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnPayments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPayments.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayments.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPayments.Location = new System.Drawing.Point(45, 164);
+            this.btnPayments.Name = "btnPayments";
+            this.btnPayments.Size = new System.Drawing.Size(124, 30);
+            this.btnPayments.TabIndex = 12;
+            this.btnPayments.Text = "Payments";
+            this.btnPayments.UseVisualStyleBackColor = false;
+            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
+            // 
             // MDIParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,6 +185,7 @@
         private System.Windows.Forms.Button btnMembers;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnTrainer;
+        private System.Windows.Forms.Button btnPayments;
     }
 }
 

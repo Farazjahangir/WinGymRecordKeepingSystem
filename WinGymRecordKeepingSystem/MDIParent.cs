@@ -68,5 +68,13 @@ namespace WinGymRecordKeepingSystem
             frmTrainers.Show();
             frmTrainers.WindowState = FormWindowState.Maximized;
         }
+
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            frmPayments frmPayments = new frmPayments();
+            frmPayments.MdiParent = this;
+            frmPayments.Show();
+            frmPayments.WindowState = FormWindowState.Maximized;
+        }
     }
 }

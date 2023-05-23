@@ -34,3 +34,4 @@ F:\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKee
 F:\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.pdb
 F:\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.frmAddTrainer.resources
 F:\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.frmTrainers.resources
+F:\WinGymRecordKeepingSystem\WinGymRecordKeepingSystem\obj\Debug\WinGymRecordKeepingSystem.frmPayments.resources
