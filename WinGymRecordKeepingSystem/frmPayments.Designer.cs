@@ -94,7 +94,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvPayments.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gvPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvPayments.Size = new System.Drawing.Size(800, 336);
+            this.gvPayments.Size = new System.Drawing.Size(800, 339);
             this.gvPayments.TabIndex = 0;
             // 
             // id
@@ -152,7 +152,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gvPayments);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 110;
+            this.splitContainer1.SplitterDistance = 107;
             this.splitContainer1.TabIndex = 13;
             // 
             // btnCollectFee

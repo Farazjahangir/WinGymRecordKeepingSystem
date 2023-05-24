@@ -77,6 +77,13 @@ namespace WinGymRecordKeepingSystem
             frmPayments.WindowState = FormWindowState.Maximized;
         }
 
-     
+        private void btnLogo_Click(object sender, EventArgs e)
+        {
+            frmDashBoard frmDashBoard = new frmDashBoard();
+            frmDashBoard.MdiParent = this;
+            frmDashBoard.Show();
+            frmDashBoard.WindowState = FormWindowState.Maximized;
+        }
+
     }
 }
