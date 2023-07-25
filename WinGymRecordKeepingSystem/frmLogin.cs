@@ -24,7 +24,7 @@ namespace WinGymRecordKeepingSystem
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text;
             string qry = $"Select email,password From tblUser where email='{email}' And password='{password}'";
-            SqlDataAdapter da = new SqlDataAdapter(qry , con);
+            SqlDataAdapter da = new SqlDataAdapter(qry , con );
             DataTable dt = new DataTable();
             da.Fill(dt);
             if (dt.Rows.Count <= 0)
