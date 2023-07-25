@@ -34,9 +34,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.pnLogin = new System.Windows.Forms.Panel();
             this.pnLogin.SuspendLayout();
             this.SuspendLayout();
@@ -65,9 +65,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(86, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 20);
+            this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Username";
+            this.label3.Text = "Email";
             // 
             // label5
             // 
@@ -97,13 +97,14 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Password";
             // 
-            // txtUsername
+            // txtEmail
             // 
-            this.txtUsername.Location = new System.Drawing.Point(90, 127);
-            this.txtUsername.Multiline = true;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(262, 27);
-            this.txtUsername.TabIndex = 4;
+            this.txtEmail.Location = new System.Drawing.Point(90, 127);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(262, 27);
+            this.txtEmail.TabIndex = 4;
+            this.txtEmail.Text = "asharkhalid@gmail.com";
             // 
             // btnLogin
             // 
@@ -119,13 +120,14 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 211);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 27);
-            this.textBox1.TabIndex = 7;
+            this.txtPassword.Location = new System.Drawing.Point(90, 211);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(262, 27);
+            this.txtPassword.TabIndex = 7;
+            this.txtPassword.Text = "ashfaz1234";
             // 
             // pnLogin
             // 
@@ -135,8 +137,8 @@
             this.pnLogin.Controls.Add(this.label3);
             this.pnLogin.Controls.Add(this.label2);
             this.pnLogin.Controls.Add(this.label6);
-            this.pnLogin.Controls.Add(this.textBox1);
-            this.pnLogin.Controls.Add(this.txtUsername);
+            this.pnLogin.Controls.Add(this.txtPassword);
+            this.pnLogin.Controls.Add(this.txtEmail);
             this.pnLogin.Controls.Add(this.label1);
             this.pnLogin.Location = new System.Drawing.Point(66, 43);
             this.pnLogin.Name = "pnLogin";
@@ -155,6 +157,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.SizeChanged += new System.EventHandler(this.frmLogin_SizeChanged);
             this.pnLogin.ResumeLayout(false);
             this.pnLogin.PerformLayout();
@@ -169,9 +172,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel pnLogin;
     }
 }
