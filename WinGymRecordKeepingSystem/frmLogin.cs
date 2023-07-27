@@ -32,12 +32,11 @@ namespace WinGymRecordKeepingSystem
                 MessageBox.Show("User not found");
             } else
             {
-                MessageBox.Show(dt.Rows[0]["Password"].ToString());
                 frmDashBoard frmDashBoard = new frmDashBoard();
                 frmDashBoard.MdiParent = this.MdiParent;
-                // frmDashBoard.Show();
-                // this.Hide();
-                // frmDashBoard.WindowState = FormWindowState.Maximized;
+                 frmDashBoard.Show();
+                 this.Hide();
+                 frmDashBoard.WindowState = FormWindowState.Maximized;
 
             }
         }

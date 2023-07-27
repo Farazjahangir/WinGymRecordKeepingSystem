@@ -58,10 +58,10 @@ namespace WinGymRecordKeepingSystem
         private void createMember()
         {
             con = new SqlConnection("workstation id=dbGymRecordKeepingSystem.mssql.somee.com;packet size=4096;user id=farazjahangir_SQLLogin_1;pwd=elg1ge3ayc;data source=dbGymRecordKeepingSystem.mssql.somee.com;persist security info=False;initial catalog=dbGymRecordKeepingSystem");
-            String qry = "INSERT INTO tblMember " +
-                "(firstName,lastName,email,contactNumber,nic) " +
+            String qry = "INSERT INTO tblUser " +
+                "(FirstName,LastName,Email,ContactNo,NIC, Role) " +
                 "values " +
-                $"('{txtFirstName.Text}','{txtLastName.Text}','{txtEmail.Text}','{mtbContact.Text}','{mtbNic.Text}')";
+                $"('{txtFirstName.Text}','{txtLastName.Text}','{txtEmail.Text}','{mtbContact.Text}','{mtbNic.Text}', '3')";
             SqlCommand cmd = new SqlCommand(qry, con);
             con.Open();
             cmd.ExecuteNonQuery();
@@ -70,14 +70,14 @@ namespace WinGymRecordKeepingSystem
 
         private void updateMember()
         {
-            string qry = $"UPDATE tblMember " +
+            string qry = $"UPDATE tblUser " +
             $"SET " +
-            $"firstName='{txtFirstName.Text}', " +
-            $"lastName='{txtLastName.Text}', " +
-            $"email='{txtEmail.Text}', " +
-            $"contactNumber='{mtbContact.Text}', " +
-            $"nic='{mtbNic.Text}' " +
-            $"WHERE memberId='{memberId}'";
+            $"FirstName='{txtFirstName.Text}', " +
+            $"LastName='{txtLastName.Text}', " +
+            $"Email='{txtEmail.Text}', " +
+            $"ContactNo='{mtbContact.Text}', " +
+            $"NIC='{mtbNic.Text}' " +
+            $"WHERE UserId='{memberId}'";
             SqlCommand cmd = new SqlCommand(qry, con);
             con.Open();
             cmd.ExecuteNonQuery();

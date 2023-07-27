@@ -64,7 +64,7 @@ namespace WinGymRecordKeepingSystem
 
         private void loadData()
         {
-            string qry = "Select * From tblMember";
+            string qry = "Select * From tblUser Where Role='3'";
             SqlDataAdapter da = new SqlDataAdapter(qry, con);
             DataTable dtUsers = new DataTable();
             da.Fill(dtUsers);
