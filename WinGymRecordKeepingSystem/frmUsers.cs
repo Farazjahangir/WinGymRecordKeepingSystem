@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace WinGymRecordKeepingSystem
     public partial class frmUsers : Form
     {
         DataGridViewCellCollection cells;
+        SqlConnection con;
         public frmUsers()
         {
             InitializeComponent();
@@ -27,9 +29,11 @@ namespace WinGymRecordKeepingSystem
 
         private void frmUsers_Load(object sender, EventArgs e)
         {
-            LoadDummyData();
-            gvMembers.CurrentCell.Selected = false;
-
+            con = new SqlConnection("workstation id=dbGymRecordKeepingSystem.mssql.somee.com;packet size=4096;user id=farazjahangir_SQLLogin_1;pwd=elg1ge3ayc;data source=dbGymRecordKeepingSystem.mssql.somee.com;persist security info=False;initial catalog=dbGymRecordKeepingSystem");
+            loadData();
+            // gvMembers.CurrentCell.Selected = false;
+            gvMembers.RowHeadersVisible = false;
+            gvMembers.CurrentCell = null;
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)
@@ -56,6 +60,15 @@ namespace WinGymRecordKeepingSystem
             this.Hide();
             frmAdmission.WindowState = FormWindowState.Maximized;
             frmAdmission.Show();
+        }
+
+        private void loadData()
+        {
+            string qry = "Select * From tblMember";
+            SqlDataAdapter da = new SqlDataAdapter(qry, con);
+            DataTable dtUsers = new DataTable();
+            da.Fill(dtUsers);
+            gvMembers.DataSource = dtUsers;
         }
     }
 }

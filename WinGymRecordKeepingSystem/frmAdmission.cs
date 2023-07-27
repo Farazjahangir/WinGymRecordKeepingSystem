@@ -48,9 +48,9 @@ namespace WinGymRecordKeepingSystem
             memberId = Convert.ToInt32(cells[0].Value);
             txtFirstName.Text = cells[1].Value.ToString();
             txtLastName.Text = cells[2].Value.ToString();
-            mtbContact.Text = cells[3].Value.ToString();
-            mtbNic.Text = cells[4].Value.ToString();
-            txtEmail.Text = cells[5]?.Value?.ToString();
+            txtEmail.Text = cells[3]?.Value?.ToString();
+            mtbContact.Text = cells[4].Value.ToString();
+            mtbNic.Text = cells[5].Value.ToString();
             editMode = true;
             btnsubmit.Text = "Update";
         }
@@ -70,19 +70,25 @@ namespace WinGymRecordKeepingSystem
 
         private void updateMember()
         {
-            string qry = $"Update tblMember " +
-                "Set " +
-                $"firstName=`{txtFirstName.Text}` " +
-                $"lastName=`{txtLastName.Text}` " +
-                $"email=`{txtEmail.Text}` " +
-                $"contact=`{mtbContact.Text}` " +
-                $"nic=`${mtbNic.Text}`" +
-                $"Where userId=`{memberId}`";
+            string qry = $"UPDATE tblMember " +
+            $"SET " +
+            $"firstName='{txtFirstName.Text}', " +
+            $"lastName='{txtLastName.Text}', " +
+            $"email='{txtEmail.Text}', " +
+            $"contactNumber='{mtbContact.Text}', " +
+            $"nic='{mtbNic.Text}' " +
+            $"WHERE memberId='{memberId}'";
             SqlCommand cmd = new SqlCommand(qry, con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
+
             MessageBox.Show("Member Updated");
+            frmUsers frmUsers = new frmUsers();
+            frmUsers.MdiParent = this.MdiParent;
+            this.Hide();
+            frmUsers.WindowState = FormWindowState.Maximized;
+            frmUsers.Show();
         }
     }
 }
