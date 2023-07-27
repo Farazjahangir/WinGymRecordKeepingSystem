@@ -34,7 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtKg = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.pnAddEquipment = new System.Windows.Forms.Panel();
             this.pnAddEquipment.SuspendLayout();
@@ -95,12 +95,12 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "KG";
             // 
-            // textBox1
+            // txtKg
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 195);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtKg.Location = new System.Drawing.Point(59, 195);
+            this.txtKg.Name = "txtKg";
+            this.txtKg.Size = new System.Drawing.Size(224, 20);
+            this.txtKg.TabIndex = 7;
             // 
             // btnAdd
             // 
@@ -114,6 +114,7 @@
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // pnAddEquipment
             // 
@@ -122,7 +123,7 @@
             this.pnAddEquipment.Controls.Add(this.txtName);
             this.pnAddEquipment.Controls.Add(this.label3);
             this.pnAddEquipment.Controls.Add(this.label2);
-            this.pnAddEquipment.Controls.Add(this.textBox1);
+            this.pnAddEquipment.Controls.Add(this.txtKg);
             this.pnAddEquipment.Controls.Add(this.txtQuantity);
             this.pnAddEquipment.Controls.Add(this.label4);
             this.pnAddEquipment.Location = new System.Drawing.Point(93, 21);
@@ -140,6 +141,7 @@
             this.Controls.Add(this.pnAddEquipment);
             this.Name = "frmAddEquipment";
             this.Text = "Add Equipment";
+            this.Load += new System.EventHandler(this.frmAddEquipment_Load);
             this.SizeChanged += new System.EventHandler(this.frmAddEquipment_SizeChanged);
             this.pnAddEquipment.ResumeLayout(false);
             this.pnAddEquipment.PerformLayout();
@@ -155,7 +157,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtKg;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel pnAddEquipment;
     }
