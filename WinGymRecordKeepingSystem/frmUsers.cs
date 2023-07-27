@@ -64,7 +64,8 @@ namespace WinGymRecordKeepingSystem
 
         private void loadData()
         {
-            string qry = "Select * From tblUser Where Role='3'";
+            string qry = "Select [tblUser].*, [tblRole].Role AS RoleName FROM tblUser INNER JOIN tblRole ON [tblUser].Role = [tblRole].RoleId Where [tblUser].Role = '3'";
+            // string qry = "Select * From tblUser Where Role='3'";
             SqlDataAdapter da = new SqlDataAdapter(qry, con);
             DataTable dtUsers = new DataTable();
             da.Fill(dtUsers);
