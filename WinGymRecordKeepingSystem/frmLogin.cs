@@ -23,7 +23,7 @@ namespace WinGymRecordKeepingSystem
         {
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text;
-            string qry = $"Select email,password From tblUser where email='{email}' And password='{password}'";
+            string qry = $"SELECT * FROM tblUser INNER JOIN tblAuth ON [tblAuth].UserId = [tblUser].UserId WHERE [tblUser].Email = '{email}' AND [tblAuth].Password='{password}'";
             SqlDataAdapter da = new SqlDataAdapter(qry , con );
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -32,11 +32,12 @@ namespace WinGymRecordKeepingSystem
                 MessageBox.Show("User not found");
             } else
             {
+                MessageBox.Show(dt.Rows[0]["Password"].ToString());
                 frmDashBoard frmDashBoard = new frmDashBoard();
                 frmDashBoard.MdiParent = this.MdiParent;
-                frmDashBoard.Show();
-                this.Hide();
-                frmDashBoard.WindowState = FormWindowState.Maximized;
+                // frmDashBoard.Show();
+                // this.Hide();
+                // frmDashBoard.WindowState = FormWindowState.Maximized;
 
             }
         }
