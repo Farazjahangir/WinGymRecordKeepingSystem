@@ -12,6 +12,7 @@ namespace WinGymRecordKeepingSystem
 {
     public partial class frmUsers : Form
     {
+        DataGridViewCellCollection cells;
         public frmUsers()
         {
             InitializeComponent();
@@ -42,12 +43,19 @@ namespace WinGymRecordKeepingSystem
 
         private void gvMembers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewCellCollection cell = gvMembers.SelectedRows[0].Cells;
+            DataGridViewRow selectedRow = gvMembers.SelectedRows[0];
+            cells = selectedRow.Cells;
+            btnEdit.Enabled = true;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-         
+            frmAdmission frmAdmission = new frmAdmission();
+            frmAdmission.loadUserData(cells);
+            frmAdmission.MdiParent = this.MdiParent;
+            this.Hide();
+            frmAdmission.WindowState = FormWindowState.Maximized;
+            frmAdmission.Show();
         }
     }
 }
