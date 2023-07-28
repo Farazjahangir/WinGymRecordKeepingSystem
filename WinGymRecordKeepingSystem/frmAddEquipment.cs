@@ -39,11 +39,16 @@ namespace WinGymRecordKeepingSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
-            con = new SqlConnection("workstation id=dbGymRecordKeepingSystem.mssql.somee.com;packet size=4096;user id=farazjahangir_SQLLogin_1;pwd=elg1ge3ayc;data source=dbGymRecordKeepingSystem.mssql.somee.com;persist security info=False;initial catalog=dbGymRecordKeepingSystem");
-            String qry = "INSERT INTO tblEquipment " +
-            "(Name,Kg,Quantity)" + "values" + $"('{txtName.Text}','{txtKg.Text}','{txtQuantity.Text}')";
+            string kg = null;
+            if (txtKg.Text != String.Empty)
+                    kg = txtKg.Text;
+            
+            string qry = "INSERT INTO tblEquipment (Name,Kg,Quantity) VALUES (@Name, @Kg, @Quantity)";
             SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@Name", txtName.Text);
+            cmd.Parameters.AddWithValue("@Kg", kg ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@Quantity", txtQuantity.Text);
+
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
