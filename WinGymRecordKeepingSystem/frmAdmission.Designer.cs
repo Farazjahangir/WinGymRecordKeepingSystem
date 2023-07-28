@@ -183,7 +183,6 @@
             this.Controls.Add(this.pnAdmission);
             this.Name = "frmAdmission";
             this.Text = "Admission From";
-            this.Load += new System.EventHandler(this.frmAdmission_Load);
             this.SizeChanged += new System.EventHandler(this.frmAdmission_SizeChanged);
             this.pnAdmission.ResumeLayout(false);
             this.pnAdmission.PerformLayout();

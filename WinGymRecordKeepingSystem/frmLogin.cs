@@ -17,6 +17,7 @@ namespace WinGymRecordKeepingSystem
         public frmLogin()
         {
             InitializeComponent();
+            con = DbConnectionManager.GetConnection();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -47,13 +48,6 @@ namespace WinGymRecordKeepingSystem
             pnLogin.Top = (this.ClientSize.Height - pnLogin.Height) / 2;
 
         }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-            con = new SqlConnection("workstation id=dbGymRecordKeepingSystem.mssql.somee.com;packet size=4096;user id=farazjahangir_SQLLogin_1;pwd=elg1ge3ayc;data source=dbGymRecordKeepingSystem.mssql.somee.com;persist security info=False;initial catalog=dbGymRecordKeepingSystem");
-
-        }
-
        
     }
 }

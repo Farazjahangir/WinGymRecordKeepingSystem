@@ -18,6 +18,7 @@ namespace WinGymRecordKeepingSystem
         public frmUsers()
         {
             InitializeComponent();
+            con = DbConnectionManager.GetConnection();
         }
 
         private void LoadDummyData()
@@ -29,7 +30,6 @@ namespace WinGymRecordKeepingSystem
 
         private void frmUsers_Load(object sender, EventArgs e)
         {
-            con = new SqlConnection("workstation id=dbGymRecordKeepingSystem.mssql.somee.com;packet size=4096;user id=farazjahangir_SQLLogin_1;pwd=elg1ge3ayc;data source=dbGymRecordKeepingSystem.mssql.somee.com;persist security info=False;initial catalog=dbGymRecordKeepingSystem");
             loadData();
             // gvMembers.CurrentCell.Selected = false;
             gvMembers.RowHeadersVisible = false;

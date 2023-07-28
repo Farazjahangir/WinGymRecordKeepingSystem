@@ -141,7 +141,6 @@
             this.Controls.Add(this.pnAddEquipment);
             this.Name = "frmAddEquipment";
             this.Text = "Add Equipment";
-            this.Load += new System.EventHandler(this.frmAddEquipment_Load);
             this.SizeChanged += new System.EventHandler(this.frmAddEquipment_SizeChanged);
             this.pnAddEquipment.ResumeLayout(false);
             this.pnAddEquipment.PerformLayout();

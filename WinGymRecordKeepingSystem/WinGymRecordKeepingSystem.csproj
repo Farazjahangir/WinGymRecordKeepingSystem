@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dbConnectionManager.cs" />
     <Compile Include="frmAddEquipment.cs">
       <SubType>Form</SubType>
     </Compile>

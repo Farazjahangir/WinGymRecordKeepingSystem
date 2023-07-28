@@ -19,18 +19,13 @@ namespace WinGymRecordKeepingSystem
         public frmAdmission()
         {
             InitializeComponent();
+            con = DbConnectionManager.GetConnection();
         }
 
         private void frmAdmission_SizeChanged(object sender, EventArgs e)
         {
             pnAdmission.Left = (this.ClientSize.Width - pnAdmission.Width) / 2;
             pnAdmission.Top = (this.ClientSize.Height - pnAdmission.Height) / 2;
-        }
-
-        private void frmAdmission_Load(object sender, EventArgs e)
-        {
-            con = new SqlConnection("workstation id=dbGymRecordKeepingSystem.mssql.somee.com;packet size=4096;user id=farazjahangir_SQLLogin_1;pwd=elg1ge3ayc;data source=dbGymRecordKeepingSystem.mssql.somee.com;persist security info=False;initial catalog=dbGymRecordKeepingSystem");
-
         }
 
         private void btnsubmit_Click(object sender, EventArgs e)
