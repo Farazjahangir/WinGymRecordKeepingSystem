@@ -14,6 +14,7 @@ namespace WinGymRecordKeepingSystem
     public partial class frmEquipments : Form
     {
         SqlConnection con;
+        DataGridViewCellCollection cells;
         public frmEquipments()
         {
             InitializeComponent();
@@ -48,10 +49,8 @@ namespace WinGymRecordKeepingSystem
 
         private void gvEquipments_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewCellCollection cell = gvEquipments.SelectedRows[0].Cells;
-            frmAddEquipment frmAddEquipment = new frmAddEquipment();
-            frmAddEquipment.loadData(cell);
-            frmAddEquipment.Show();
+            cells = gvEquipments.SelectedRows[0].Cells;
+            btnEdit.Enabled = true;
         }
 
         private void loadData()
@@ -61,6 +60,16 @@ namespace WinGymRecordKeepingSystem
             DataTable dt = new DataTable();
             da.Fill(dt);
             gvEquipments.DataSource = dt;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            frmAddEquipment frmAddEquipment = new frmAddEquipment();
+            frmAddEquipment.WindowState = FormWindowState.Maximized;
+            frmAddEquipment.MdiParent = this.MdiParent;
+            frmAddEquipment.loadData(cells);
+            frmAddEquipment.Show();
+            this.Hide();
         }
     }
 }

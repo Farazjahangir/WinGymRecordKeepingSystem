@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAddEquipmentForm = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,15 +40,15 @@
             this.pnAddEquipment.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblAddEquipmentForm
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(54, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Add Equipment";
+            this.lblAddEquipmentForm.AutoSize = true;
+            this.lblAddEquipmentForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddEquipmentForm.Location = new System.Drawing.Point(54, 34);
+            this.lblAddEquipmentForm.Name = "lblAddEquipmentForm";
+            this.lblAddEquipmentForm.Size = new System.Drawing.Size(286, 42);
+            this.lblAddEquipmentForm.TabIndex = 0;
+            this.lblAddEquipmentForm.Text = "Add Equipment";
             // 
             // txtName
             // 
@@ -119,16 +119,16 @@
             // pnAddEquipment
             // 
             this.pnAddEquipment.Controls.Add(this.btnAdd);
-            this.pnAddEquipment.Controls.Add(this.label1);
+            this.pnAddEquipment.Controls.Add(this.lblAddEquipmentForm);
             this.pnAddEquipment.Controls.Add(this.txtName);
             this.pnAddEquipment.Controls.Add(this.label3);
             this.pnAddEquipment.Controls.Add(this.label2);
             this.pnAddEquipment.Controls.Add(this.txtKg);
             this.pnAddEquipment.Controls.Add(this.txtQuantity);
             this.pnAddEquipment.Controls.Add(this.label4);
-            this.pnAddEquipment.Location = new System.Drawing.Point(93, 21);
+            this.pnAddEquipment.Location = new System.Drawing.Point(79, 21);
             this.pnAddEquipment.Name = "pnAddEquipment";
-            this.pnAddEquipment.Size = new System.Drawing.Size(374, 391);
+            this.pnAddEquipment.Size = new System.Drawing.Size(444, 391);
             this.pnAddEquipment.TabIndex = 14;
             // 
             // frmAddEquipment
@@ -150,7 +150,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAddEquipmentForm;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
