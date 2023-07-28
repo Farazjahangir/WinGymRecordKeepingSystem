@@ -81,9 +81,9 @@ namespace WinGymRecordKeepingSystem
             MessageBox.Show("Member Updated");
             frmUsers frmUsers = new frmUsers();
             frmUsers.MdiParent = this.MdiParent;
-            this.Hide();
             frmUsers.WindowState = FormWindowState.Maximized;
             frmUsers.Show();
+            this.Hide();
         }
     }
 }

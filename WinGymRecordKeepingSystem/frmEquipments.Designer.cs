@@ -37,9 +37,6 @@
             this.btnAddNew = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gvEquipments = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -124,10 +121,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvEquipments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gvEquipments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvEquipments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.name,
-            this.kg,
-            this.quantity});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,27 +147,6 @@
             this.gvEquipments.Size = new System.Drawing.Size(679, 454);
             this.gvEquipments.TabIndex = 0;
             this.gvEquipments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvEquipments_CellClick);
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.FillWeight = 284.7716F;
-            this.name.HeaderText = "Name";
-            this.name.Name = "name";
-            // 
-            // kg
-            // 
-            this.kg.FillWeight = 5.067887F;
-            this.kg.HeaderText = "KG";
-            this.kg.Name = "kg";
-            this.kg.Width = 170;
-            // 
-            // quantity
-            // 
-            this.quantity.FillWeight = 10.16054F;
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.Name = "quantity";
-            this.quantity.Width = 170;
             // 
             // frmEquipments
             // 
@@ -203,8 +175,5 @@
         private System.Windows.Forms.Button btnAddNew;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView gvEquipments;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
     }
 }

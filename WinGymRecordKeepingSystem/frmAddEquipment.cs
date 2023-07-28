@@ -48,6 +48,11 @@ namespace WinGymRecordKeepingSystem
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Equipment Add Sucessfully");
+            frmEquipments frmEquipments = new frmEquipments();
+            frmEquipments.MdiParent = this.MdiParent;
+            frmEquipments.WindowState = FormWindowState.Maximized;
+            this.Hide();
+            frmEquipments.Show();
         }
     }
 }
