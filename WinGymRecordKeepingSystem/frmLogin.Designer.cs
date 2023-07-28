@@ -38,6 +38,8 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pnLogin = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,10 +142,34 @@
             this.pnLogin.Controls.Add(this.txtPassword);
             this.pnLogin.Controls.Add(this.txtEmail);
             this.pnLogin.Controls.Add(this.label1);
+            this.pnLogin.Controls.Add(this.label7);
+            this.pnLogin.Controls.Add(this.label4);
             this.pnLogin.Location = new System.Drawing.Point(66, 43);
             this.pnLogin.Name = "pnLogin";
             this.pnLogin.Size = new System.Drawing.Size(449, 347);
             this.pnLogin.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(132, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(165, 174);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 25);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "*";
             // 
             // frmLogin
             // 
@@ -175,6 +201,8 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel pnLogin;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
     }
 }
 

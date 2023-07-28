@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace WinGymRecordKeepingSystem
 {
-    public partial class frmAddEquipment : Form    
+    public partial class frmAddEquipment : Form
     {
         SqlConnection con;
         int? equipmentId = null;
@@ -56,11 +57,29 @@ namespace WinGymRecordKeepingSystem
 
         private void createData()
         {
+
             string kg = null;
             if (txtKg.Text != String.Empty)
                 kg = txtKg.Text;
 
+
+            // Perform form validation
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                MessageBox.Show("Fill all required feilds.");
+            }
+
+            if (string.IsNullOrWhiteSpace(txtQuantity.Text))
+            {
+                MessageBox.Show("Fill all required feilds.");
+            } else
+            {
+                MessageBox.Show("Equipment Add Sucessfully");
+            }
+
+
             string qry = "INSERT INTO tblEquipment (Name,Kg,Quantity) VALUES (@Name, @Kg, @Quantity)";
+        
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@Name", txtName.Text);
             cmd.Parameters.AddWithValue("@Kg", kg ?? (object)DBNull.Value);
@@ -69,7 +88,7 @@ namespace WinGymRecordKeepingSystem
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
-            MessageBox.Show("Equipment Add Sucessfully");
+          
         }
 
         private void updateData()
@@ -98,5 +117,9 @@ namespace WinGymRecordKeepingSystem
 
 
         }
+
+       
+
+     
     }
 }
