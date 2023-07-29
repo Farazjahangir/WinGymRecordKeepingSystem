@@ -50,6 +50,7 @@ namespace WinGymRecordKeepingSystem
             DataGridViewRow selectedRow = gvMembers.SelectedRows[0];
             cells = selectedRow.Cells;
             btnEdit.Enabled = true;
+            btnDelete.Enabled = true;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -64,12 +65,37 @@ namespace WinGymRecordKeepingSystem
 
         private void loadData()
         {
-            string qry = "Select [tblUser].*, [tblRole].Role AS RoleName FROM tblUser INNER JOIN tblRole ON [tblUser].Role = [tblRole].RoleId Where [tblUser].Role = '3'";
+            string qry = "Select [tblUser].*, [tblRole].Role " +
+                "FROM tblUser " +
+                "INNER JOIN tblRole ON [tblUser].Role = [tblRole].RoleId " +
+                "Where [tblUser].Role = '3' AND IsActive='1'";
             // string qry = "Select * From tblUser Where Role='3'";
             SqlDataAdapter da = new SqlDataAdapter(qry, con);
             DataTable dtUsers = new DataTable();
             da.Fill(dtUsers);
             gvMembers.DataSource = dtUsers;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string userId = cells["UserId"].Value.ToString();
+                string qry = "UPDATE tblUser SET IsActive='0' WHERE UserId=@ID";
+                SqlCommand cmd = new SqlCommand(qry, con);
+                cmd.Parameters.AddWithValue("@ID", userId);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                loadData();
+                btnDelete.Enabled = false;
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+            }
+            
+            
         }
     }
 }
