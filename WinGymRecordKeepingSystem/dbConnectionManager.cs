@@ -1,4 +1,5 @@
 ﻿using System.Data.SqlClient;
+using System.Windows.Forms;
 
 public static class DbConnectionManager
 {

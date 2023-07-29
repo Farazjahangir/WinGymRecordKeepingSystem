@@ -51,6 +51,7 @@ namespace WinGymRecordKeepingSystem
         {
             cells = gvEquipments.SelectedRows[0].Cells;
             btnEdit.Enabled = true;
+            btnDelete.Enabled = true;
         }
 
         private void loadData()
@@ -70,6 +71,26 @@ namespace WinGymRecordKeepingSystem
             frmAddEquipment.loadData(cells);
             frmAddEquipment.Show();
             this.Hide();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string equipmentId = cells["EquipmentId"].Value.ToString();
+                string qry = "DELETE FROM tblEquipment Where EquipmentId=@ID";
+                SqlCommand cmd = new SqlCommand(qry, con);
+                cmd.Parameters.AddWithValue("@ID", equipmentId);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                loadData();
+                btnDelete.Enabled = false;
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+            }
         }
     }
 }
