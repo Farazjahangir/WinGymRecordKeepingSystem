@@ -41,18 +41,26 @@ namespace WinGymRecordKeepingSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (equipmentId != null)
+            if (!validateFields())
             {
-                updateData();
-            } else
+                MessageBox.Show("Please fill all required fields");
+            } 
+            else
             {
-                createData();
+                if (equipmentId != null)
+                {
+                    updateData();
+                }
+                else
+                {
+                    createData();
+                }
+                frmEquipments frmEquipments = new frmEquipments();
+                frmEquipments.MdiParent = this.MdiParent;
+                frmEquipments.WindowState = FormWindowState.Maximized;
+                this.Hide();
+                frmEquipments.Show();
             }
-            frmEquipments frmEquipments = new frmEquipments();
-            frmEquipments.MdiParent = this.MdiParent;
-            frmEquipments.WindowState = FormWindowState.Maximized;
-            this.Hide();
-            frmEquipments.Show();
         }
 
         private void createData()
@@ -61,22 +69,6 @@ namespace WinGymRecordKeepingSystem
             string kg = null;
             if (txtKg.Text != String.Empty)
                 kg = txtKg.Text;
-
-
-            // Perform form validation
-            if (string.IsNullOrWhiteSpace(txtName.Text))
-            {
-                MessageBox.Show("Fill all required feilds.");
-            }
-
-            if (string.IsNullOrWhiteSpace(txtQuantity.Text))
-            {
-                MessageBox.Show("Fill all required feilds.");
-            } else
-            {
-                MessageBox.Show("Equipment Add Sucessfully");
-            }
-
 
             string qry = "INSERT INTO tblEquipment (Name,Kg,Quantity) VALUES (@Name, @Kg, @Quantity)";
         
@@ -88,7 +80,7 @@ namespace WinGymRecordKeepingSystem
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
-          
+            MessageBox.Show("Equipment added");
         }
 
         private void updateData()
@@ -114,12 +106,22 @@ namespace WinGymRecordKeepingSystem
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Equipment Updated");
-
-
         }
 
-       
+        private bool validateFields()
+        {
+            bool isValidated = true;
 
-     
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                isValidated = false;
+            }
+
+            else if (string.IsNullOrWhiteSpace(txtQuantity.Text))
+            {
+                isValidated = false;
+            }
+            return isValidated;
+        }
     }
 }
