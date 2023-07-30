@@ -30,55 +30,116 @@ namespace WinGymRecordKeepingSystem
 
         private void btnsubmit_Click(object sender, EventArgs e)
         {
-          if (!editMode)
+            if (!validateFields())
+                MessageBox.Show("Please fill all required fields");
+            else
             {
-                createMember();
-            } else {
-                updateMember();
+                btnsubmit.Enabled = false;
+                if (!editMode)
+                {
+                    createMember();
+                }
+                else
+                {
+                    updateMember();
+                }
+                btnsubmit.Enabled = true;
             }
         }
 
         public void loadUserData(DataGridViewCellCollection cells)
         {
-            memberId = Convert.ToInt32(cells[0].Value);
-            txtFirstName.Text = cells[1].Value.ToString();
-            txtLastName.Text = cells[2].Value.ToString();
-            txtEmail.Text = cells[3]?.Value?.ToString();
-            mtbContact.Text = cells[4].Value.ToString();
-            mtbNic.Text = cells[5].Value.ToString();
+            memberId = Convert.ToInt32(cells["UserId"].Value);
+            txtFirstName.Text = cells["FirstName"].Value.ToString();
+            txtLastName.Text = cells["LastName"].Value.ToString();
+            txtEmail.Text = cells["Email"]?.Value?.ToString();
+            mtbContact.Text = cells["ContactNo"].Value.ToString();
+            mtbNic.Text = cells["NIC"].Value.ToString();
             editMode = true;
             btnsubmit.Text = "Update";
         }
 
         private void createMember()
         {
-            con = new SqlConnection("workstation id=dbGymRecordKeepingSystem.mssql.somee.com;packet size=4096;user id=farazjahangir_SQLLogin_1;pwd=elg1ge3ayc;data source=dbGymRecordKeepingSystem.mssql.somee.com;persist security info=False;initial catalog=dbGymRecordKeepingSystem");
-            String qry = "INSERT INTO tblUser " +
-                "(FirstName,LastName,Email,ContactNo,NIC, Role) " +
-                "values " +
-                $"('{txtFirstName.Text}','{txtLastName.Text}','{txtEmail.Text}','{mtbContact.Text}','{mtbNic.Text}', '3')";
-            SqlCommand cmd = new SqlCommand(qry, con);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                String qry = "INSERT INTO tblUser " +
+                                "(FirstName,LastName,Email,ContactNo,NIC, Role) " +
+                                "values " +
+                                $"('{txtFirstName.Text}','{txtLastName.Text}','{txtEmail.Text}','{mtbContact.Text}','{mtbNic.Text}', '3')";
+                SqlCommand cmd = new SqlCommand(qry, con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Member Added");
+                goToUsers();
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+            }
+
         }
 
         private void updateMember()
         {
-            string qry = $"UPDATE tblUser " +
-            $"SET " +
-            $"FirstName='{txtFirstName.Text}', " +
-            $"LastName='{txtLastName.Text}', " +
-            $"Email='{txtEmail.Text}', " +
-            $"ContactNo='{mtbContact.Text}', " +
-            $"NIC='{mtbNic.Text}' " +
-            $"WHERE UserId='{memberId}'";
-            SqlCommand cmd = new SqlCommand(qry, con);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                string qry = "UPDATE tblUser " +
+                             "SET " +
+                             "FirstName=@FName, " +
+                             "LastName=@LName, " +
+                             "Email=@Email, " +
+                             "ContactNo=@Contact, " +
+                             "NIC=@NIC " +
+                             "WHERE UserId=@ID";
+                SqlCommand cmd = new SqlCommand(qry, con);
+                cmd.Parameters.AddWithValue("@FName", txtFirstName.Text);
+                cmd.Parameters.AddWithValue("@LName", txtLastName.Text);
+                cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                cmd.Parameters.AddWithValue("@Contact", mtbContact.Text);
+                cmd.Parameters.AddWithValue("@NIC", mtbNic.Text);
+                cmd.Parameters.AddWithValue("@ID", memberId);
 
-            MessageBox.Show("Member Updated");
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Member Updated");
+                goToUsers();
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+            }
+
+        }
+
+        private bool validateFields()
+        {
+            bool isValidated = true;
+            if (string.IsNullOrEmpty(txtFirstName.Text))
+            {
+                isValidated = false;
+            } else if (string.IsNullOrEmpty(txtLastName.Text))
+            {
+                isValidated = false;
+            } else if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                isValidated = false;
+            } else if (!mtbContact.MaskFull)
+            {
+                isValidated = false;
+            } else if (!mtbNic.MaskFull)
+            {
+                isValidated = false;
+            }
+            return isValidated;
+        }
+
+        private void goToUsers()
+        {
             frmUsers frmUsers = new frmUsers();
             frmUsers.MdiParent = this.MdiParent;
             frmUsers.WindowState = FormWindowState.Maximized;
