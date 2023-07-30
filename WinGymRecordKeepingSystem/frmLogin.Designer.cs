@@ -38,8 +38,9 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pnLogin = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbWait = new System.Windows.Forms.Label();
             this.pnLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,6 +135,7 @@
             // pnLogin
             // 
             this.pnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pnLogin.Controls.Add(this.lbWait);
             this.pnLogin.Controls.Add(this.label5);
             this.pnLogin.Controls.Add(this.btnLogin);
             this.pnLogin.Controls.Add(this.label3);
@@ -146,8 +148,19 @@
             this.pnLogin.Controls.Add(this.label4);
             this.pnLogin.Location = new System.Drawing.Point(66, 43);
             this.pnLogin.Name = "pnLogin";
-            this.pnLogin.Size = new System.Drawing.Size(449, 347);
+            this.pnLogin.Size = new System.Drawing.Size(473, 383);
             this.pnLogin.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(165, 174);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 25);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "*";
             // 
             // label4
             // 
@@ -160,16 +173,22 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "*";
             // 
-            // label7
+            // lbWait
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(165, 174);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 25);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "*";
+            this.lbWait.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbWait.AutoSize = true;
+            this.lbWait.BackColor = System.Drawing.Color.Transparent;
+            this.lbWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWait.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbWait.Location = new System.Drawing.Point(85, 335);
+            this.lbWait.Name = "lbWait";
+            this.lbWait.Size = new System.Drawing.Size(285, 29);
+            this.lbWait.TabIndex = 13;
+            this.lbWait.Text = "Please wait, Logging In";
+            this.lbWait.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWait.Visible = false;
             // 
             // frmLogin
             // 
@@ -203,6 +222,7 @@
         private System.Windows.Forms.Panel pnLogin;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbWait;
     }
 }
 
