@@ -33,10 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvPayments = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.memberName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPayments = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnCollectFee = new System.Windows.Forms.Button();
@@ -66,11 +62,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvPayments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvPayments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.memberName,
-            this.paymentAmount,
-            this.date});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,34 +87,6 @@
             this.gvPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvPayments.Size = new System.Drawing.Size(800, 339);
             this.gvPayments.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.FillWeight = 53.26885F;
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            // 
-            // memberName
-            // 
-            this.memberName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.memberName.FillWeight = 203.0456F;
-            this.memberName.HeaderText = "Member Name";
-            this.memberName.Name = "memberName";
-            // 
-            // paymentAmount
-            // 
-            this.paymentAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.paymentAmount.FillWeight = 108.7055F;
-            this.paymentAmount.HeaderText = "Payment Amount";
-            this.paymentAmount.Name = "paymentAmount";
-            // 
-            // date
-            // 
-            this.date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.date.FillWeight = 34.97988F;
-            this.date.HeaderText = "Date";
-            this.date.Name = "date";
             // 
             // lblPayments
             // 
@@ -178,6 +141,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmPayments";
             this.Text = "frmPayments";
+            this.Load += new System.EventHandler(this.frmPayments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvPayments)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -193,10 +157,6 @@
         private System.Windows.Forms.DataGridView gvPayments;
         private System.Windows.Forms.Label lblPayments;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn memberName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paymentAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.Button btnCollectFee;
     }
 }

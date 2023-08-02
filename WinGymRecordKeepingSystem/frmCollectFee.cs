@@ -46,7 +46,7 @@ namespace WinGymRecordKeepingSystem
                     cmd.Parameters.AddWithValue("@Payment", txtFee.Text);
                     cmd.Parameters.AddWithValue("@Date", DateTime.Now);
                     cmd.Parameters.AddWithValue("TransType", "2");
-                    cmd.Parameters.AddWithValue("PayType", "1");
+                    cmd.Parameters.AddWithValue("PayType", "2");
                     cmd.Parameters.AddWithValue("@Quantity", "1");
                     cmd.Parameters.AddWithValue("@UPrice", txtFee.Text);
                     con.Open();
