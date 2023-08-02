@@ -16,8 +16,8 @@ namespace WinGymRecordKeepingSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDIParent());
-           // Application.Run(new frmUsers());
+            // Application.Run(new MDIParent());
+            Application.Run(new frmCollectFee());
 
         }
     }
