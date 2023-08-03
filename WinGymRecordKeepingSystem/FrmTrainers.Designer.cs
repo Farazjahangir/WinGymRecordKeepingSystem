@@ -37,9 +37,6 @@
             this.btnAddNew = new System.Windows.Forms.Button();
             this.lblTrainers = new System.Windows.Forms.Label();
             this.gvTrainers = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -124,10 +121,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvTrainers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gvTrainers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvTrainers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.name,
-            this.kg,
-            this.quantity});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,6 +134,7 @@
             this.gvTrainers.Location = new System.Drawing.Point(0, 0);
             this.gvTrainers.MultiSelect = false;
             this.gvTrainers.Name = "gvTrainers";
+            this.gvTrainers.ReadOnly = true;
             this.gvTrainers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
@@ -154,27 +148,6 @@
             this.gvTrainers.Size = new System.Drawing.Size(800, 342);
             this.gvTrainers.TabIndex = 0;
             // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.FillWeight = 284.7716F;
-            this.name.HeaderText = "Name";
-            this.name.Name = "name";
-            // 
-            // kg
-            // 
-            this.kg.FillWeight = 5.067887F;
-            this.kg.HeaderText = "KG";
-            this.kg.Name = "kg";
-            this.kg.Width = 170;
-            // 
-            // quantity
-            // 
-            this.quantity.FillWeight = 10.16054F;
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.Name = "quantity";
-            this.quantity.Width = 170;
-            // 
             // frmTrainers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +157,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmTrainers";
             this.Text = "Trainers";
+            this.Load += new System.EventHandler(this.frmTrainers_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -201,8 +175,5 @@
         private System.Windows.Forms.Button btnAddNew;
         private System.Windows.Forms.Label lblTrainers;
         private System.Windows.Forms.DataGridView gvTrainers;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
     }
 }
