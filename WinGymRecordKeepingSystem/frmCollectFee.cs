@@ -14,6 +14,7 @@ namespace WinGymRecordKeepingSystem
     public partial class frmCollectFee : Form
     {
         SqlConnection con;
+        string selectedUserId;
         public frmCollectFee()
         {
             InitializeComponent();
@@ -37,12 +38,11 @@ namespace WinGymRecordKeepingSystem
                 try
                 {
                     btnCollect.Enabled = false;
-                    DataRow row = validateUser();
                     string qry = "INSERT INTO tblTransaction" +
                         "(UserId, Payment, DateTime, TransactionType, PaymentType, Quantity, UnitPrice)" +
                         "VALUES (@ID, @Payment, @Date, @TransType, @PayType, @Quantity, @UPrice)";
                     SqlCommand cmd = new SqlCommand(qry, con);
-                    cmd.Parameters.AddWithValue("@ID", row["UserId"].ToString());
+                    cmd.Parameters.AddWithValue("@ID", selectedUserId);
                     cmd.Parameters.AddWithValue("@Payment", txtFee.Text);
                     cmd.Parameters.AddWithValue("@Date", DateTime.Now);
                     cmd.Parameters.AddWithValue("TransType", "2");
@@ -82,17 +82,34 @@ namespace WinGymRecordKeepingSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtEmail.Text))
+            if (!validateSearchFeilds())
             {
-                MessageBox.Show("Email field cannot be empty");
+                MessageBox.Show("Provide atleast one search criteria");
             } else
             {
                 try
                 {
                     btnSearch.Enabled = false;
-                    string qry = "SELECT * FROM tblUser WHERE Email=@Email AND Role = 3";
+                    StringBuilder qryBuilder = new StringBuilder("SELECT * FROM tblUser WHERE Role=3");
+                    string email = txtEmail.Text.Trim();
+                    string userId = txtUserId.Text.Trim();
+                    string contact = mtbContactSearch.Text.Replace("-", "").Trim();
+
+                    if (!string.IsNullOrEmpty(email))
+                    {
+                        qryBuilder.Append($" AND Email='{email}'");
+                    }
+                    if(!string.IsNullOrEmpty(userId))
+                    {
+                        qryBuilder.Append($" AND UserId='{userId}'");
+                    }
+                    if (!string.IsNullOrEmpty(contact))
+                    {
+                        qryBuilder.Append($" AND ContactNo='{contact}'");
+                    }
+
+                    string qry = qryBuilder.ToString();
                     SqlDataAdapter da = new SqlDataAdapter(qry, con);
-                    da.SelectCommand.Parameters.AddWithValue("@Email", txtEmail.Text);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     if (dt.Rows.Count <= 0)
@@ -105,6 +122,7 @@ namespace WinGymRecordKeepingSystem
                     txtLastName.Text = row["LastName"].ToString();
                     mtbNic.Text = row["NIC"].ToString();
                     mtbContact.Text = row["ContactNo"].ToString();
+                    selectedUserId = row["UserId"].ToString();
                 } catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message);
@@ -138,18 +156,18 @@ namespace WinGymRecordKeepingSystem
             return isValid;
         }
 
-        private DataRow validateUser()
+        private bool validateSearchFeilds()
         {
-            string qry = "SELECT * FROM tblUser WHERE ContactNo=@Contact AND Role = 3 AND IsActive = 1";
-            SqlDataAdapter da = new SqlDataAdapter(qry, con);
-            da.SelectCommand.Parameters.AddWithValue("@Contact", mtbContact.Text);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count <= 0)
+            bool isValid = true;
+
+            if (string.IsNullOrEmpty(txtEmail.Text) 
+                && string.IsNullOrEmpty(txtUserId.Text)
+                && !mtbContactSearch.MaskFull
+                )
             {
-                throw new Exception("User not found");
+                isValid = false;
             }
-            return dt.Rows[0];
+            return isValid;
         }
     }
 }
