@@ -108,6 +108,7 @@
     <Compile Include="frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="helpers.cs" />
     <Compile Include="MDIParent.cs">
       <SubType>Form</SubType>
     </Compile>

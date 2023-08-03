@@ -41,11 +41,21 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnTrainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTrainer
             // 
+            this.pnTrainer.Controls.Add(this.label5);
+            this.pnTrainer.Controls.Add(this.label4);
+            this.pnTrainer.Controls.Add(this.label3);
+            this.pnTrainer.Controls.Add(this.label2);
+            this.pnTrainer.Controls.Add(this.label1);
             this.pnTrainer.Controls.Add(this.btnsubmit);
             this.pnTrainer.Controls.Add(this.lblContact);
             this.pnTrainer.Controls.Add(this.mtbNic);
@@ -58,7 +68,7 @@
             this.pnTrainer.Controls.Add(this.txtLastName);
             this.pnTrainer.Controls.Add(this.txtEmail);
             this.pnTrainer.Controls.Add(this.lblEmail);
-            this.pnTrainer.Location = new System.Drawing.Point(116, 30);
+            this.pnTrainer.Location = new System.Drawing.Point(2, 2);
             this.pnTrainer.Name = "pnTrainer";
             this.pnTrainer.Size = new System.Drawing.Size(568, 391);
             this.pnTrainer.TabIndex = 14;
@@ -75,6 +85,7 @@
             this.btnsubmit.TabIndex = 11;
             this.btnsubmit.Text = "Submit";
             this.btnsubmit.UseVisualStyleBackColor = false;
+            this.btnsubmit.Click += new System.EventHandler(this.btnsubmit_Click);
             // 
             // lblContact
             // 
@@ -82,9 +93,9 @@
             this.lblContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContact.Location = new System.Drawing.Point(15, 207);
             this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(71, 20);
+            this.lblContact.Size = new System.Drawing.Size(65, 20);
             this.lblContact.TabIndex = 7;
-            this.lblContact.Text = "Contact*";
+            this.lblContact.Text = "Contact";
             // 
             // mtbNic
             // 
@@ -100,9 +111,9 @@
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.Location = new System.Drawing.Point(15, 93);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(92, 20);
+            this.lblFirstName.Size = new System.Drawing.Size(86, 20);
             this.lblFirstName.TabIndex = 1;
-            this.lblFirstName.Text = "First Name*";
+            this.lblFirstName.Text = "First Name";
             // 
             // lblNic
             // 
@@ -110,9 +121,9 @@
             this.lblNic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNic.Location = new System.Drawing.Point(15, 247);
             this.lblNic.Name = "lblNic";
-            this.lblNic.Size = new System.Drawing.Size(37, 20);
+            this.lblNic.Size = new System.Drawing.Size(31, 20);
             this.lblNic.TabIndex = 8;
-            this.lblNic.Text = "Nic*";
+            this.lblNic.Text = "Nic";
             // 
             // mtbContact
             // 
@@ -138,9 +149,9 @@
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.Location = new System.Drawing.Point(15, 138);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(92, 20);
+            this.lblLastName.Size = new System.Drawing.Size(86, 20);
             this.lblLastName.TabIndex = 2;
-            this.lblLastName.Text = "Last Name*";
+            this.lblLastName.Text = "Last Name";
             // 
             // txtFirstName
             // 
@@ -173,11 +184,66 @@
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(96, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(17, 24);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(57, 172);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(17, 24);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(96, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 24);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(41, 243);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 24);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(77, 204);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(17, 24);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "*";
+            // 
             // frmAddTrainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(571, 393);
             this.ControlBox = false;
             this.Controls.Add(this.pnTrainer);
             this.Name = "frmAddTrainer";
@@ -204,5 +270,10 @@
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
