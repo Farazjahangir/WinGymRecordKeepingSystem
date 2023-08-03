@@ -47,19 +47,30 @@ namespace WinGymRecordKeepingSystem
             } 
             else
             {
-                if (equipmentId != null)
+                try
                 {
-                    updateData();
+                    if (equipmentId != null)
+                    {
+                        updateData();
+                    }
+                    else
+                    {
+                        createData();
+                    }
+                    createTransaction();
+                    frmEquipments frmEquipments = new frmEquipments();
+                    frmEquipments.MdiParent = this.MdiParent;
+                    frmEquipments.WindowState = FormWindowState.Maximized;
+                    this.Hide();
+                    frmEquipments.Show();
                 }
-                else
+                catch(Exception ex)
                 {
-                    createData();
+                    MessageBox.Show(ex.Message);
+                } finally
+                {
+                    con.Close();
                 }
-                frmEquipments frmEquipments = new frmEquipments();
-                frmEquipments.MdiParent = this.MdiParent;
-                frmEquipments.WindowState = FormWindowState.Maximized;
-                this.Hide();
-                frmEquipments.Show();
             }
         }
 
@@ -79,7 +90,6 @@ namespace WinGymRecordKeepingSystem
 
             con.Open();
             cmd.ExecuteNonQuery();
-            con.Close();
             MessageBox.Show("Equipment added");
         }
 
@@ -104,7 +114,6 @@ namespace WinGymRecordKeepingSystem
 
             con.Open();
             cmd.ExecuteNonQuery();
-            con.Close();
             MessageBox.Show("Equipment Updated");
         }
 
@@ -112,16 +121,67 @@ namespace WinGymRecordKeepingSystem
         {
             bool isValidated = true;
 
-            if (string.IsNullOrWhiteSpace(txtName.Text))
+            if (string.IsNullOrEmpty(txtName.Text))
             {
                 isValidated = false;
             }
 
-            else if (string.IsNullOrWhiteSpace(txtQuantity.Text))
+            else if (string.IsNullOrEmpty(txtQuantity.Text))
+            {
+                isValidated = false;
+            } else if (string.IsNullOrEmpty(txtUnitPrice.Text))
+            {
+                isValidated = false;
+            } else if (cmbUsers.SelectedValue.ToString() == "0")
             {
                 isValidated = false;
             }
             return isValidated;
+        }
+
+        private void frmAddEquipment_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                string qry = "SELECT * FROM tblUser WHERE Role=1";
+                SqlDataAdapter da = new SqlDataAdapter(qry, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                DataRow defaultRow = dt.NewRow();
+                defaultRow["UserId"] = 0;
+                defaultRow["FirstName"] = "Select User";
+                dt.Rows.InsertAt(defaultRow, 0);
+
+
+                cmbUsers.DataSource = dt;
+                cmbUsers.DisplayMember = "FirstName";
+                cmbUsers.ValueMember = "UserId";
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void createTransaction()
+        {
+                string qry = "INSERT INTO tblTransaction" +
+                        "(UserId, Payment, DateTime, TransactionType, PaymentType, Quantity, UnitPrice)" +
+                        "VALUES (@ID, @Payment, @Date, @TransType, @PayType, @Quantity, @UPrice)";
+                string totalPayment = (Convert.ToInt32(txtUnitPrice.Text)
+                    *
+                    Convert.ToInt32(txtQuantity.Text)).ToString();
+                
+                SqlCommand cmd = new SqlCommand(qry, con);
+                cmd.Parameters.AddWithValue("@ID", cmbUsers.SelectedValue);
+                cmd.Parameters.AddWithValue("@Payment", totalPayment);
+                cmd.Parameters.AddWithValue("@Date", DateTime.Now);
+                cmd.Parameters.AddWithValue("TransType", "2");
+                cmd.Parameters.AddWithValue("PayType", "2");
+                cmd.Parameters.AddWithValue("@Quantity", txtQuantity.Text);
+                cmd.Parameters.AddWithValue("@UPrice", txtUnitPrice.Text);
+
+                cmd.ExecuteNonQuery();
         }
     }
 }

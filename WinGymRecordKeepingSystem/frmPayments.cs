@@ -36,9 +36,10 @@ namespace WinGymRecordKeepingSystem
 
         private void loadData()
         {
-            try
-            {
+            //try
+            //{
                 string qry = "Select" +
+                    "[tblTransaction].TransactionId AS TransactionId, " +
                     "[tblTransaction].Payment, " +
                     "[tblTransaction].DateTime, " +
                     "[tblTransaction].Quantity, " +
@@ -48,8 +49,11 @@ namespace WinGymRecordKeepingSystem
                     "[tblUser].NIC, " +
                     "[tblUser].ContactNo, " +
                     "[tblUser].Email, " +
+                    "[tblUser].UserId AS UserId, " +
                     "[tblTransactionType].Name AS TransactionType, " +
-                    "[tblPaymentType].Name AS PaymentType " +
+                    "[tblTransactionType].TransactionTypeId AS TransactionTypeId, " +
+                    "[tblPaymentType].Name AS PaymentType, " +
+                    "[tblPaymentType].PaymentTypeId AS PaymentTypeId " +
                 "FROM tblTransaction " +
                 "INNER JOIN tblTransactionType ON [tblTransaction].TransactionType = [tblTransactionType].TransactionTypeId " +
                 "INNER JOIN tblPaymentType ON [tblTransaction].PaymentType = [tblPaymentType].PaymentTypeId " +
@@ -58,10 +62,10 @@ namespace WinGymRecordKeepingSystem
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 gvPayments.DataSource = dt;
-            } catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+          //  } catch(Exception ex)
+            //{
+              //  MessageBox.Show(ex.Message);
+           // }
         }
     }
 }
