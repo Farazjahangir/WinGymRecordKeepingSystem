@@ -15,6 +15,7 @@ namespace WinGymRecordKeepingSystem
     {
         SqlConnection con;
         DataGridViewCellCollection cells;
+        string trainerId;
         public frmTrainers()
         {
             InitializeComponent();
@@ -73,7 +74,9 @@ namespace WinGymRecordKeepingSystem
         private void gvTrainers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             cells = gvTrainers.SelectedRows[0].Cells;
+            trainerId = cells["UserId"].Value.ToString();
             btnEdit.Enabled = true;
+            btnDelete.Enabled = true;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -83,6 +86,29 @@ namespace WinGymRecordKeepingSystem
             frmAddTrainer.MdiParent = this.MdiParent;
             frmAddTrainer.Show();
             this.Hide();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string qry = "UPDATE tblUser " +
+                    "SET IsActive=0" +
+                    "WHERE UserId=@ID";
+                SqlCommand cmd = new SqlCommand(qry, con);
+                cmd.Parameters.AddWithValue("@ID", trainerId);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                loadData();
+                btnDelete.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            } finally
+            {
+                con.Close();
+            }
         }
     }
 }
