@@ -61,6 +61,7 @@ namespace WinGymRecordKeepingSystem
                 SqlDataAdapter da = new SqlDataAdapter(qry, con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                dt = Helpers.setDateTimeInDataTableToCurrent(dt, "DateTime");
                 gvPayments.DataSource = dt;
           //  } catch(Exception ex)
             //{

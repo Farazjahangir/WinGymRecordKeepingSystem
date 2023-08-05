@@ -65,7 +65,16 @@ namespace WinGymRecordKeepingSystem
 
         private void loadData()
         {
-            string qry = "Select [tblUser].*, [tblRole].Role " +
+            string qry = "Select " +
+                "[tblUser].UserId, " +
+                "[tblUser].FirstName, " +
+                "[tblUser].LastName, " +
+                "[tblUser].NIC, " +
+                "[tblUser].ContactNo, " +
+                "[tblUser].Email, " +
+                "[tblUser].CreatedAt AS 'JoinDate/Time', " +
+                "[tblRole].Role, " +
+                "[tblRole].RoleId " +
                 "FROM tblUser " +
                 "INNER JOIN tblRole ON [tblUser].Role = [tblRole].RoleId " +
                 "Where [tblUser].Role = '3' AND IsActive='1'";
@@ -73,6 +82,7 @@ namespace WinGymRecordKeepingSystem
             SqlDataAdapter da = new SqlDataAdapter(qry, con);
             DataTable dtUsers = new DataTable();
             da.Fill(dtUsers);
+            dtUsers = Helpers.setDateTimeInDataTableToCurrent(dtUsers, "JoinDate/Time");
             gvMembers.DataSource = dtUsers;
         }
 

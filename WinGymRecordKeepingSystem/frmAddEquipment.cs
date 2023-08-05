@@ -103,13 +103,15 @@ namespace WinGymRecordKeepingSystem
                 "SET " +
                 "Name=@Name, " +
                 "Quantity=@Quantity, " +
-                "Kg=@Kg " +
+                "Kg=@Kg, " +
+                "UpdateAt=@UDate " +
                 "Where EquipmentId=@ID";
 
             SqlCommand cmd = new SqlCommand(qry, con);
             cmd.Parameters.AddWithValue("@Name", txtName.Text);
             cmd.Parameters.AddWithValue("@Quantity", txtQuantity.Text);
             cmd.Parameters.AddWithValue("@Kg", kg ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@UDate", DateTime.Now);
             cmd.Parameters.AddWithValue("@ID", equipmentId);
 
             con.Open();

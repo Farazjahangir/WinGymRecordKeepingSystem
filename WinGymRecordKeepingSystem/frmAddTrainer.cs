@@ -14,6 +14,7 @@ namespace WinGymRecordKeepingSystem
     public partial class frmAddTrainer : Form
     {
         SqlConnection con;
+        string trainerId;
         public frmAddTrainer()
         {
             InitializeComponent();
@@ -35,7 +36,13 @@ namespace WinGymRecordKeepingSystem
             {
                 try
                 {
-                    createTrainer();
+                    if (string.IsNullOrEmpty(trainerId))
+                    {
+                        createTrainer();
+                    } else
+                    {
+                        updateTrainer();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -88,6 +95,49 @@ namespace WinGymRecordKeepingSystem
                 con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Trainer Added");
+        }
+
+        private void updateTrainer()
+        {
+            btnsubmit.Enabled = false;
+            string qry = "UPDATE tblUser SET " +
+                "FirstName=@FName, " +
+                "LastName=@LName, " +
+                "Email=@Email, " +
+                "NIC=@NIC, " +
+                "ContactNo=@CntNo, " +
+                "UpdatedAt=@UDate " +
+                "WHERE UserId=@ID";
+
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@FName", txtFirstName.Text);
+            cmd.Parameters.AddWithValue("@LName", txtLastName.Text);
+            cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+            cmd.Parameters.AddWithValue(
+                "@NIC", 
+                Helpers.removeDashesFromString(mtbNic.Text)
+                );
+            cmd.Parameters.AddWithValue(
+                "CntNo", 
+                Helpers.removeDashesFromString(mtbContact.Text)
+                );
+            cmd.Parameters.AddWithValue("@UDate", DateTimeOffset.Now);
+            cmd.Parameters.AddWithValue("@ID", trainerId);
+
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Trainer updated");
+        }
+
+        public void loadData(DataGridViewCellCollection cell)
+        {
+            txtFirstName.Text = cell["FirstName"].Value.ToString();
+            txtLastName.Text = cell["LastName"].Value.ToString();
+            txtEmail.Text = cell["Email"].Value.ToString();
+            mtbContact.Text = cell["ContactNo"].Value.ToString();
+            mtbNic.Text = cell["NIC"].Value.ToString();
+            trainerId = cell["UserId"].Value.ToString();
         }
     }
 }

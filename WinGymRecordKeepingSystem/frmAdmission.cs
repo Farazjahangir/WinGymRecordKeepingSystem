@@ -91,7 +91,8 @@ namespace WinGymRecordKeepingSystem
                              "LastName=@LName, " +
                              "Email=@Email, " +
                              "ContactNo=@Contact, " +
-                             "NIC=@NIC " +
+                             "NIC=@NIC, " +
+                             "UpdatedAt=@UDate " +
                              "WHERE UserId=@ID";
                 SqlCommand cmd = new SqlCommand(qry, con);
                 cmd.Parameters.AddWithValue("@FName", txtFirstName.Text);
@@ -99,6 +100,7 @@ namespace WinGymRecordKeepingSystem
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@Contact", mtbContact.Text);
                 cmd.Parameters.AddWithValue("@NIC", mtbNic.Text);
+                cmd.Parameters.AddWithValue("@UDate", DateTimeOffset.Now);
                 cmd.Parameters.AddWithValue("@ID", memberId);
 
 
