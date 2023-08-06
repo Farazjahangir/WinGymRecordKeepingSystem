@@ -38,9 +38,9 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pnLogin = new System.Windows.Forms.Panel();
+            this.lbWait = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbWait = new System.Windows.Forms.Label();
             this.pnLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,6 +151,23 @@
             this.pnLogin.Size = new System.Drawing.Size(473, 383);
             this.pnLogin.TabIndex = 8;
             // 
+            // lbWait
+            // 
+            this.lbWait.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbWait.AutoSize = true;
+            this.lbWait.BackColor = System.Drawing.Color.Transparent;
+            this.lbWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWait.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbWait.Location = new System.Drawing.Point(168, 320);
+            this.lbWait.Name = "lbWait";
+            this.lbWait.Size = new System.Drawing.Size(90, 17);
+            this.lbWait.TabIndex = 13;
+            this.lbWait.Text = "Please wait";
+            this.lbWait.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbWait.Visible = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -172,23 +189,6 @@
             this.label4.Size = new System.Drawing.Size(20, 25);
             this.label4.TabIndex = 11;
             this.label4.Text = "*";
-            // 
-            // lbWait
-            // 
-            this.lbWait.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbWait.AutoSize = true;
-            this.lbWait.BackColor = System.Drawing.Color.Transparent;
-            this.lbWait.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWait.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbWait.Location = new System.Drawing.Point(85, 335);
-            this.lbWait.Name = "lbWait";
-            this.lbWait.Size = new System.Drawing.Size(285, 29);
-            this.lbWait.TabIndex = 13;
-            this.lbWait.Text = "Please wait, Logging In";
-            this.lbWait.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbWait.Visible = false;
             // 
             // frmLogin
             // 

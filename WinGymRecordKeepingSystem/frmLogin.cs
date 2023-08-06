@@ -14,12 +14,25 @@ namespace WinGymRecordKeepingSystem
     public partial class frmLogin : Form
     {
         SqlConnection con;
+
+        //add this for removing flicker (testing)//
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handleparams = base.CreateParams;
+                handleparams.ExStyle |= 0x02000000;
+                return handleparams;
+
+            }
+        }
         public frmLogin()
         {
             InitializeComponent();
+            
             con = DbConnectionManager.GetConnection();
         }
-
+       
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (!validateFields())
@@ -88,6 +101,8 @@ namespace WinGymRecordKeepingSystem
 
             return isValidated;
         }
+
+        
     }
 }
 
