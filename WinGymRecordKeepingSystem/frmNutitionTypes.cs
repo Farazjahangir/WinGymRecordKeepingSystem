@@ -154,6 +154,7 @@ namespace WinGymRecordKeepingSystem
                 txtNutritionType.Text = "";
                 nutritionId = "";
                 btnSubmit.Text = "Add";
+                btnDelete.Enabled = false;
             } catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);

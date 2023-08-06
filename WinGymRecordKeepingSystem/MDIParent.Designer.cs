@@ -35,6 +35,9 @@
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pnMdiParent = new System.Windows.Forms.Panel();
+            this.btnNutritionType = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbllogoName = new System.Windows.Forms.Label();
             this.btnLogo = new System.Windows.Forms.Button();
             this.btnPayments = new System.Windows.Forms.Button();
@@ -42,9 +45,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnEquipments = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnNutritionType = new System.Windows.Forms.Button();
+            this.btnNutritionCompany = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.pnMdiParent.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +77,7 @@
             // pnMdiParent
             // 
             this.pnMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnMdiParent.Controls.Add(this.btnNutritionCompany);
             this.pnMdiParent.Controls.Add(this.btnNutritionType);
             this.pnMdiParent.Controls.Add(this.label2);
             this.pnMdiParent.Controls.Add(this.label1);
@@ -92,6 +94,44 @@
             this.pnMdiParent.Name = "pnMdiParent";
             this.pnMdiParent.Size = new System.Drawing.Size(194, 463);
             this.pnMdiParent.TabIndex = 4;
+            // 
+            // btnNutritionType
+            // 
+            this.btnNutritionType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnNutritionType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNutritionType.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNutritionType.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNutritionType.Location = new System.Drawing.Point(10, 239);
+            this.btnNutritionType.Name = "btnNutritionType";
+            this.btnNutritionType.Size = new System.Drawing.Size(167, 30);
+            this.btnNutritionType.TabIndex = 17;
+            this.btnNutritionType.Text = "NutritionTypes";
+            this.btnNutritionType.UseVisualStyleBackColor = false;
+            this.btnNutritionType.Click += new System.EventHandler(this.btnNutritionType_Click);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(104, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 26);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Health";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(104, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 26);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Club";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbllogoName
             // 
@@ -192,43 +232,19 @@
             this.btnMembers.UseVisualStyleBackColor = false;
             this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
-            // label1
+            // btnNutritionCompany
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(104, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 26);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Club";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(104, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 26);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Health";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnNutritionType
-            // 
-            this.btnNutritionType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
-            this.btnNutritionType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNutritionType.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNutritionType.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNutritionType.Location = new System.Drawing.Point(10, 239);
-            this.btnNutritionType.Name = "btnNutritionType";
-            this.btnNutritionType.Size = new System.Drawing.Size(167, 30);
-            this.btnNutritionType.TabIndex = 17;
-            this.btnNutritionType.Text = "NutritionTypes";
-            this.btnNutritionType.UseVisualStyleBackColor = false;
-            this.btnNutritionType.Click += new System.EventHandler(this.btnNutritionType_Click);
+            this.btnNutritionCompany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnNutritionCompany.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNutritionCompany.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNutritionCompany.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNutritionCompany.Location = new System.Drawing.Point(10, 275);
+            this.btnNutritionCompany.Name = "btnNutritionCompany";
+            this.btnNutritionCompany.Size = new System.Drawing.Size(167, 30);
+            this.btnNutritionCompany.TabIndex = 18;
+            this.btnNutritionCompany.Text = "Nutrition Company";
+            this.btnNutritionCompany.UseVisualStyleBackColor = false;
+            this.btnNutritionCompany.Click += new System.EventHandler(this.btnNutritionCompany_Click);
             // 
             // MDIParent
             // 
@@ -270,6 +286,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnNutritionType;
+        private System.Windows.Forms.Button btnNutritionCompany;
     }
 }
 

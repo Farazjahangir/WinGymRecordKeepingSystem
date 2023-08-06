@@ -92,5 +92,13 @@ namespace WinGymRecordKeepingSystem
             frmNutitionTypes.Show();
             frmNutitionTypes.WindowState = FormWindowState.Maximized;
         }
+
+        private void btnNutritionCompany_Click(object sender, EventArgs e)
+        {
+            frmNutitionCompany frmNutitionCompany = new frmNutitionCompany();
+            frmNutitionCompany.MdiParent = this;
+            frmNutitionCompany.Show();
+            frmNutitionCompany.WindowState = FormWindowState.Maximized;
+        }
     }
 }

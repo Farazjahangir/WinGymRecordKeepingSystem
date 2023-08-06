@@ -1,6 +1,6 @@
 ﻿namespace WinGymRecordKeepingSystem
 {
-    partial class frmNutritionTypes
+    partial class frmNutitionCompany
     {
         /// <summary>
         /// Required designer variable.
@@ -33,18 +33,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNutritionCompany = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAddNew = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.gvNutritionTypes = new System.Windows.Forms.DataGridView();
-            this.txtNutritionType = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.gvNutritionCompanies = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvNutritionTypes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNutritionCompanies)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -58,7 +58,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.txtNutritionType);
+            this.splitContainer1.Panel1.Controls.Add(this.txtNutritionCompany);
             this.splitContainer1.Panel1.Controls.Add(this.btnDelete);
             this.splitContainer1.Panel1.Controls.Add(this.btnAddNew);
             this.splitContainer1.Panel1.Controls.Add(this.btnSubmit);
@@ -66,10 +66,27 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.gvNutritionTypes);
+            this.splitContainer1.Panel2.Controls.Add(this.gvNutritionCompanies);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 242;
-            this.splitContainer1.TabIndex = 12;
+            this.splitContainer1.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(417, 33);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Add/Update Nutrition Company";
+            // 
+            // txtNutritionCompany
+            // 
+            this.txtNutritionCompany.Location = new System.Drawing.Point(18, 52);
+            this.txtNutritionCompany.Name = "txtNutritionCompany";
+            this.txtNutritionCompany.Size = new System.Drawing.Size(261, 20);
+            this.txtNutritionCompany.TabIndex = 10;
             // 
             // btnDelete
             // 
@@ -120,20 +137,20 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 160);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 33);
+            this.label1.Size = new System.Drawing.Size(257, 33);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Nutrition Types";
+            this.label1.Text = "Nutrition Company";
             // 
-            // gvNutritionTypes
+            // gvNutritionCompanies
             // 
-            this.gvNutritionTypes.AllowUserToAddRows = false;
-            this.gvNutritionTypes.AllowUserToDeleteRows = false;
+            this.gvNutritionCompanies.AllowUserToAddRows = false;
+            this.gvNutritionCompanies.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gvNutritionTypes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gvNutritionTypes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(214)))), ((int)(((byte)(224)))));
-            this.gvNutritionTypes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gvNutritionTypes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.gvNutritionTypes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.gvNutritionCompanies.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gvNutritionCompanies.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(214)))), ((int)(((byte)(224)))));
+            this.gvNutritionCompanies.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gvNutritionCompanies.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.gvNutritionCompanies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,8 +158,8 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvNutritionTypes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gvNutritionTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvNutritionCompanies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gvNutritionCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,13 +167,13 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gvNutritionTypes.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gvNutritionTypes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gvNutritionTypes.GridColor = System.Drawing.Color.LightGray;
-            this.gvNutritionTypes.Location = new System.Drawing.Point(0, 0);
-            this.gvNutritionTypes.MultiSelect = false;
-            this.gvNutritionTypes.Name = "gvNutritionTypes";
-            this.gvNutritionTypes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.gvNutritionCompanies.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gvNutritionCompanies.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gvNutritionCompanies.GridColor = System.Drawing.Color.LightGray;
+            this.gvNutritionCompanies.Location = new System.Drawing.Point(0, 0);
+            this.gvNutritionCompanies.MultiSelect = false;
+            this.gvNutritionCompanies.Name = "gvNutritionCompanies";
+            this.gvNutritionCompanies.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,45 +181,28 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvNutritionTypes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.gvNutritionTypes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvNutritionTypes.Size = new System.Drawing.Size(800, 204);
-            this.gvNutritionTypes.TabIndex = 0;
-            this.gvNutritionTypes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvNutritionTypes_CellClick);
+            this.gvNutritionCompanies.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.gvNutritionCompanies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gvNutritionCompanies.Size = new System.Drawing.Size(800, 204);
+            this.gvNutritionCompanies.TabIndex = 0;
+            this.gvNutritionCompanies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvNutritionCompanies_CellClick);
             // 
-            // txtNutritionType
-            // 
-            this.txtNutritionType.Location = new System.Drawing.Point(18, 52);
-            this.txtNutritionType.Name = "txtNutritionType";
-            this.txtNutritionType.Size = new System.Drawing.Size(261, 20);
-            this.txtNutritionType.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(357, 33);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Add/Update Nutrition Type";
-            // 
-            // frmNutritionTypes
+            // frmNutitionCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.splitContainer1);
-            this.Name = "frmNutritionTypes";
-            this.Text = "Nutrition Types";
-            this.Load += new System.EventHandler(this.frmNutritionTypes_Load);
+            this.Name = "frmNutitionCompany";
+            this.Text = "Nutition Company";
+            this.Load += new System.EventHandler(this.frmNutitionCompany_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gvNutritionTypes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNutritionCompanies)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,12 +210,12 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtNutritionCompany;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAddNew;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView gvNutritionTypes;
-        private System.Windows.Forms.TextBox txtNutritionType;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView gvNutritionCompanies;
     }
 }
