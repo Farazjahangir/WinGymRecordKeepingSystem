@@ -85,5 +85,12 @@ namespace WinGymRecordKeepingSystem
             frmDashBoard.WindowState = FormWindowState.Maximized;
         }
 
+        private void btnNutritionType_Click(object sender, EventArgs e)
+        {
+            frmNutritionTypes frmNutitionTypes = new frmNutritionTypes();
+            frmNutitionTypes.MdiParent = this;
+            frmNutitionTypes.Show();
+            frmNutitionTypes.WindowState = FormWindowState.Maximized;
+        }
     }
 }
