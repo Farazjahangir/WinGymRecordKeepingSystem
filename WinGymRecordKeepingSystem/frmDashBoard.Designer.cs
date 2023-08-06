@@ -41,6 +41,7 @@
             this.ControlBox = false;
             this.Name = "frmDashBoard";
             this.Text = "DashBoard";
+            this.Load += new System.EventHandler(this.frmDashBoard_Load);
             this.ResumeLayout(false);
 
         }
