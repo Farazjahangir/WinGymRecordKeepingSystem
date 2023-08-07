@@ -35,17 +35,14 @@
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pnMdiParent = new System.Windows.Forms.Panel();
+            this.btnNutritionCompany = new System.Windows.Forms.Button();
             this.btnNutritionType = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbllogoName = new System.Windows.Forms.Label();
             this.btnLogo = new System.Windows.Forms.Button();
             this.btnPayments = new System.Windows.Forms.Button();
             this.btnTrainer = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnEquipments = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
-            this.btnNutritionCompany = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.pnMdiParent.SuspendLayout();
             this.SuspendLayout();
@@ -79,12 +76,9 @@
             this.pnMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnMdiParent.Controls.Add(this.btnNutritionCompany);
             this.pnMdiParent.Controls.Add(this.btnNutritionType);
-            this.pnMdiParent.Controls.Add(this.label2);
-            this.pnMdiParent.Controls.Add(this.label1);
-            this.pnMdiParent.Controls.Add(this.lbllogoName);
-            this.pnMdiParent.Controls.Add(this.btnLogo);
             this.pnMdiParent.Controls.Add(this.btnPayments);
             this.pnMdiParent.Controls.Add(this.btnTrainer);
+            this.pnMdiParent.Controls.Add(this.btnLogo);
             this.pnMdiParent.Controls.Add(this.btnLogout);
             this.pnMdiParent.Controls.Add(this.btnEquipments);
             this.pnMdiParent.Controls.Add(this.btnMembers);
@@ -95,55 +89,33 @@
             this.pnMdiParent.Size = new System.Drawing.Size(194, 463);
             this.pnMdiParent.TabIndex = 4;
             // 
+            // btnNutritionCompany
+            // 
+            this.btnNutritionCompany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnNutritionCompany.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNutritionCompany.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNutritionCompany.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNutritionCompany.Location = new System.Drawing.Point(12, 369);
+            this.btnNutritionCompany.Name = "btnNutritionCompany";
+            this.btnNutritionCompany.Size = new System.Drawing.Size(167, 30);
+            this.btnNutritionCompany.TabIndex = 18;
+            this.btnNutritionCompany.Text = "Nutrition Company";
+            this.btnNutritionCompany.UseVisualStyleBackColor = false;
+            this.btnNutritionCompany.Click += new System.EventHandler(this.btnNutritionCompany_Click);
+            // 
             // btnNutritionType
             // 
             this.btnNutritionType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
             this.btnNutritionType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNutritionType.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNutritionType.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNutritionType.Location = new System.Drawing.Point(10, 239);
+            this.btnNutritionType.Location = new System.Drawing.Point(12, 333);
             this.btnNutritionType.Name = "btnNutritionType";
             this.btnNutritionType.Size = new System.Drawing.Size(167, 30);
             this.btnNutritionType.TabIndex = 17;
             this.btnNutritionType.Text = "NutritionTypes";
             this.btnNutritionType.UseVisualStyleBackColor = false;
             this.btnNutritionType.Click += new System.EventHandler(this.btnNutritionType_Click);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(104, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 26);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Health";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(104, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 26);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Club";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lbllogoName
-            // 
-            this.lbllogoName.BackColor = System.Drawing.Color.Transparent;
-            this.lbllogoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllogoName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbllogoName.Location = new System.Drawing.Point(104, 3);
-            this.lbllogoName.Name = "lbllogoName";
-            this.lbllogoName.Size = new System.Drawing.Size(73, 26);
-            this.lbllogoName.TabIndex = 14;
-            this.lbllogoName.Text = "Hamza";
-            this.lbllogoName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnLogo
             // 
@@ -153,11 +125,11 @@
             this.btnLogo.FlatAppearance.BorderSize = 0;
             this.btnLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogo.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLogo.ForeColor = System.Drawing.Color.Transparent;
             this.btnLogo.Image = ((System.Drawing.Image)(resources.GetObject("btnLogo.Image")));
-            this.btnLogo.Location = new System.Drawing.Point(12, 3);
+            this.btnLogo.Location = new System.Drawing.Point(22, 14);
             this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(86, 86);
+            this.btnLogo.Size = new System.Drawing.Size(139, 147);
             this.btnLogo.TabIndex = 13;
             this.btnLogo.UseVisualStyleBackColor = false;
             this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
@@ -168,7 +140,7 @@
             this.btnPayments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPayments.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayments.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPayments.Location = new System.Drawing.Point(10, 203);
+            this.btnPayments.Location = new System.Drawing.Point(12, 297);
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.Size = new System.Drawing.Size(167, 30);
             this.btnPayments.TabIndex = 12;
@@ -182,7 +154,7 @@
             this.btnTrainer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTrainer.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrainer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTrainer.Location = new System.Drawing.Point(10, 167);
+            this.btnTrainer.Location = new System.Drawing.Point(12, 261);
             this.btnTrainer.Name = "btnTrainer";
             this.btnTrainer.Size = new System.Drawing.Size(167, 30);
             this.btnTrainer.TabIndex = 11;
@@ -196,7 +168,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogout.Location = new System.Drawing.Point(10, 419);
+            this.btnLogout.Location = new System.Drawing.Point(10, 443);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(167, 30);
             this.btnLogout.TabIndex = 10;
@@ -210,7 +182,7 @@
             this.btnEquipments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEquipments.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEquipments.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEquipments.Location = new System.Drawing.Point(10, 131);
+            this.btnEquipments.Location = new System.Drawing.Point(12, 225);
             this.btnEquipments.Name = "btnEquipments";
             this.btnEquipments.Size = new System.Drawing.Size(167, 30);
             this.btnEquipments.TabIndex = 9;
@@ -224,27 +196,13 @@
             this.btnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMembers.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMembers.Location = new System.Drawing.Point(10, 95);
+            this.btnMembers.Location = new System.Drawing.Point(12, 189);
             this.btnMembers.Name = "btnMembers";
             this.btnMembers.Size = new System.Drawing.Size(167, 30);
             this.btnMembers.TabIndex = 8;
             this.btnMembers.Text = "Members";
             this.btnMembers.UseVisualStyleBackColor = false;
             this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
-            // 
-            // btnNutritionCompany
-            // 
-            this.btnNutritionCompany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
-            this.btnNutritionCompany.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNutritionCompany.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNutritionCompany.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNutritionCompany.Location = new System.Drawing.Point(10, 275);
-            this.btnNutritionCompany.Name = "btnNutritionCompany";
-            this.btnNutritionCompany.Size = new System.Drawing.Size(167, 30);
-            this.btnNutritionCompany.TabIndex = 18;
-            this.btnNutritionCompany.Text = "Nutrition Company";
-            this.btnNutritionCompany.UseVisualStyleBackColor = false;
-            this.btnNutritionCompany.Click += new System.EventHandler(this.btnNutritionCompany_Click);
             // 
             // MDIParent
             // 
@@ -282,9 +240,6 @@
         private System.Windows.Forms.Button btnTrainer;
         private System.Windows.Forms.Button btnPayments;
         private System.Windows.Forms.Button btnLogo;
-        private System.Windows.Forms.Label lbllogoName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnNutritionType;
         private System.Windows.Forms.Button btnNutritionCompany;
     }
