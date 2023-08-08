@@ -100,5 +100,6 @@ namespace WinGymRecordKeepingSystem
             frmNutitionCompany.Show();
             frmNutitionCompany.WindowState = FormWindowState.Maximized;
         }
+
     }
 }
