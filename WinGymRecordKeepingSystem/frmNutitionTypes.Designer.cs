@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNutritionTypes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNutritionType = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAddNew = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gvNutritionTypes = new System.Windows.Forms.DataGridView();
-            this.txtNutritionType = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -71,46 +72,72 @@
             this.splitContainer1.SplitterDistance = 242;
             this.splitContainer1.TabIndex = 12;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(357, 33);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Add/Update Nutrition Type";
+            // 
+            // txtNutritionType
+            // 
+            this.txtNutritionType.Location = new System.Drawing.Point(18, 52);
+            this.txtNutritionType.Name = "txtNutritionType";
+            this.txtNutritionType.Size = new System.Drawing.Size(261, 20);
+            this.txtNutritionType.TabIndex = 10;
+            // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnDelete.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDelete.Location = new System.Drawing.Point(122, 206);
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(109, 206);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(85, 26);
+            this.btnDelete.Size = new System.Drawing.Size(75, 26);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAddNew
             // 
-            this.btnAddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnAddNew.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddNew.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddNew.Location = new System.Drawing.Point(18, 206);
+            this.btnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.Image")));
+            this.btnAddNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNew.Location = new System.Drawing.Point(21, 206);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(85, 26);
+            this.btnAddNew.Size = new System.Drawing.Size(64, 26);
             this.btnAddNew.TabIndex = 8;
-            this.btnAddNew.Text = "Add New";
+            this.btnAddNew.Text = "Add ";
+            this.btnAddNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddNew.UseVisualStyleBackColor = false;
             this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // btnSubmit
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnSubmit.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSubmit.Image = ((System.Drawing.Image)(resources.GetObject("btnSubmit.Image")));
+            this.btnSubmit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubmit.Location = new System.Drawing.Point(18, 78);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(85, 26);
+            this.btnSubmit.Size = new System.Drawing.Size(64, 26);
             this.btnSubmit.TabIndex = 7;
             this.btnSubmit.Text = "Add";
+            this.btnSubmit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
@@ -169,23 +196,6 @@
             this.gvNutritionTypes.Size = new System.Drawing.Size(800, 204);
             this.gvNutritionTypes.TabIndex = 0;
             this.gvNutritionTypes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvNutritionTypes_CellClick);
-            // 
-            // txtNutritionType
-            // 
-            this.txtNutritionType.Location = new System.Drawing.Point(18, 52);
-            this.txtNutritionType.Name = "txtNutritionType";
-            this.txtNutritionType.Size = new System.Drawing.Size(261, 20);
-            this.txtNutritionType.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(357, 33);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Add/Update Nutrition Type";
             // 
             // frmNutritionTypes
             // 

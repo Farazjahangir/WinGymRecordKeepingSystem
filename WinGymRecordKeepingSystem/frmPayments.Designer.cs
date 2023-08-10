@@ -120,7 +120,7 @@
             // 
             // btnCollectFee
             // 
-            this.btnCollectFee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnCollectFee.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCollectFee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCollectFee.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCollectFee.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
