@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPayments));
             this.gvPayments = new System.Windows.Forms.DataGridView();
             this.lblPayments = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -120,15 +121,15 @@
             // 
             // btnCollectFee
             // 
-            this.btnCollectFee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnCollectFee.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCollectFee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCollectFee.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCollectFee.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCollectFee.Location = new System.Drawing.Point(18, 69);
+            this.btnCollectFee.Image = ((System.Drawing.Image)(resources.GetObject("btnCollectFee.Image")));
+            this.btnCollectFee.Location = new System.Drawing.Point(21, 69);
             this.btnCollectFee.Name = "btnCollectFee";
-            this.btnCollectFee.Size = new System.Drawing.Size(119, 26);
+            this.btnCollectFee.Size = new System.Drawing.Size(79, 26);
             this.btnCollectFee.TabIndex = 10;
-            this.btnCollectFee.Text = "Collect Fee";
             this.btnCollectFee.UseVisualStyleBackColor = false;
             this.btnCollectFee.Click += new System.EventHandler(this.btnCollectFee_Click);
             // 

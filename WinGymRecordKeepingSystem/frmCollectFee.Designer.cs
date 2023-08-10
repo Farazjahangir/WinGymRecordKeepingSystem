@@ -28,11 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCollectFee));
             this.pnCollectFee = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.mtbContactSearch = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtUserId = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.mtbContact = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.mtbNic = new System.Windows.Forms.MaskedTextBox();
@@ -43,16 +53,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnCollect = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtUserId = new System.Windows.Forms.TextBox();
-            this.mtbContactSearch = new System.Windows.Forms.MaskedTextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnCollectFee.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +88,51 @@
             this.pnCollectFee.Size = new System.Drawing.Size(589, 444);
             this.pnCollectFee.TabIndex = 15;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(10, 19);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(127, 25);
+            this.label12.TabIndex = 38;
+            this.label12.Text = "Search By:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(432, 63);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(61, 20);
+            this.label16.TabIndex = 35;
+            this.label16.Text = "User Id";
+            // 
+            // mtbContactSearch
+            // 
+            this.mtbContactSearch.Location = new System.Drawing.Point(270, 86);
+            this.mtbContactSearch.Mask = "0000-0000000";
+            this.mtbContactSearch.Name = "mtbContactSearch";
+            this.mtbContactSearch.Size = new System.Drawing.Size(151, 20);
+            this.mtbContactSearch.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 195);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 37);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Collect Fee";
+            // 
+            // txtUserId
+            // 
+            this.txtUserId.Location = new System.Drawing.Point(434, 86);
+            this.txtUserId.Name = "txtUserId";
+            this.txtUserId.Size = new System.Drawing.Size(91, 20);
+            this.txtUserId.TabIndex = 34;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -97,6 +143,13 @@
             this.label11.Size = new System.Drawing.Size(14, 18);
             this.label11.TabIndex = 29;
             this.label11.Text = "*";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(14, 86);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(239, 20);
+            this.txtEmail.TabIndex = 13;
             // 
             // label10
             // 
@@ -109,6 +162,16 @@
             this.label10.TabIndex = 28;
             this.label10.Text = "*";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(266, 63);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(89, 20);
+            this.label14.TabIndex = 32;
+            this.label14.Text = "Contact No";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -120,6 +183,16 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "*";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Email";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -130,6 +203,20 @@
             this.label8.Size = new System.Drawing.Size(14, 18);
             this.label8.TabIndex = 26;
             this.label8.Text = "*";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(530, 83);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(26, 25);
+            this.btnSearch.TabIndex = 15;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // mtbContact
             // 
@@ -223,40 +310,9 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Last Name";
             // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSearch.Location = new System.Drawing.Point(460, 112);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(90, 32);
-            this.btnSearch.TabIndex = 15;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Email";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(14, 86);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(253, 20);
-            this.txtEmail.TabIndex = 13;
-            // 
             // btnCollect
             // 
-            this.btnCollect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
+            this.btnCollect.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCollect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCollect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCollect.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -267,61 +323,6 @@
             this.btnCollect.Text = "Collect";
             this.btnCollect.UseVisualStyleBackColor = false;
             this.btnCollect.Click += new System.EventHandler(this.btnCollect_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(292, 63);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(89, 20);
-            this.label14.TabIndex = 32;
-            this.label14.Text = "Contact No";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(458, 63);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(61, 20);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "User Id";
-            // 
-            // txtUserId
-            // 
-            this.txtUserId.Location = new System.Drawing.Point(460, 86);
-            this.txtUserId.Name = "txtUserId";
-            this.txtUserId.Size = new System.Drawing.Size(91, 20);
-            this.txtUserId.TabIndex = 34;
-            // 
-            // mtbContactSearch
-            // 
-            this.mtbContactSearch.Location = new System.Drawing.Point(296, 86);
-            this.mtbContactSearch.Mask = "0000-0000000";
-            this.mtbContactSearch.Name = "mtbContactSearch";
-            this.mtbContactSearch.Size = new System.Drawing.Size(151, 20);
-            this.mtbContactSearch.TabIndex = 36;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(10, 19);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(127, 25);
-            this.label12.TabIndex = 38;
-            this.label12.Text = "Search By:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 37);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Collect Fee";
             // 
             // frmCollectFee
             // 
