@@ -77,8 +77,6 @@ namespace WinGymRecordKeepingSystem
             nutritionId = "";
             btnSubmit.Text = "Add";
         }
-
-
         private void loadData()
         {
             try

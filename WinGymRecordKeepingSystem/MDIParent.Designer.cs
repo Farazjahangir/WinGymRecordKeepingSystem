@@ -118,7 +118,7 @@
             this.btnNutritionType.Name = "btnNutritionType";
             this.btnNutritionType.Size = new System.Drawing.Size(197, 30);
             this.btnNutritionType.TabIndex = 17;
-            this.btnNutritionType.Text = "NutritionTypes";
+            this.btnNutritionType.Text = "Nutrition Types";
             this.btnNutritionType.UseVisualStyleBackColor = false;
             this.btnNutritionType.Click += new System.EventHandler(this.btnNutritionType_Click);
             // 
