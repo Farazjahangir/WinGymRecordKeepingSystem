@@ -45,11 +45,21 @@ namespace WinGymRecordKeepingSystem
                 SqlDataAdapter da = new SqlDataAdapter(qry, con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                dt = Helpers.setDateTimeInDataTableToCurrent(dt, "AddedOn");
                 gvNutritions.DataSource = dt;
             } catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            frmAddNutrition frmAddNutrition = new frmAddNutrition();
+            frmAddNutrition.MdiParent = this.MdiParent;
+            this.Hide();
+            frmAddNutrition.Show();
+            frmAddNutrition.WindowState = FormWindowState.Maximized;
         }
     }
 }

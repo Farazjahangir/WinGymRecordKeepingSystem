@@ -54,6 +54,12 @@
     <Compile Include="frmAddEquipment.Designer.cs">
       <DependentUpon>frmAddEquipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddNutrition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNutrition.Designer.cs">
+      <DependentUpon>frmAddNutrition.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddTrainer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAddEquipment.resx">
       <DependentUpon>frmAddEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNutrition.resx">
+      <DependentUpon>frmAddNutrition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddTrainer.resx">
       <DependentUpon>frmAddTrainer.cs</DependentUpon>
