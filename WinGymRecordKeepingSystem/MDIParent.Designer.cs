@@ -43,6 +43,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnEquipments = new System.Windows.Forms.Button();
             this.btnMembers = new System.Windows.Forms.Button();
+            this.btnNutrition = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.pnMdiParent.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +75,7 @@
             // pnMdiParent
             // 
             this.pnMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnMdiParent.Controls.Add(this.btnNutrition);
             this.pnMdiParent.Controls.Add(this.btnNutritionCompany);
             this.pnMdiParent.Controls.Add(this.btnNutritionType);
             this.pnMdiParent.Controls.Add(this.btnPayments);
@@ -220,6 +222,22 @@
             this.btnMembers.UseVisualStyleBackColor = false;
             this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
+            // btnNutrition
+            // 
+            this.btnNutrition.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnNutrition.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNutrition.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNutrition.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNutrition.Image = ((System.Drawing.Image)(resources.GetObject("btnNutrition.Image")));
+            this.btnNutrition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNutrition.Location = new System.Drawing.Point(14, 421);
+            this.btnNutrition.Name = "btnNutrition";
+            this.btnNutrition.Size = new System.Drawing.Size(197, 30);
+            this.btnNutrition.TabIndex = 19;
+            this.btnNutrition.Text = "Nutritions";
+            this.btnNutrition.UseVisualStyleBackColor = false;
+            this.btnNutrition.Click += new System.EventHandler(this.btnNutrition_Click);
+            // 
             // MDIParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +277,7 @@
         private System.Windows.Forms.Button btnLogo;
         private System.Windows.Forms.Button btnNutritionType;
         private System.Windows.Forms.Button btnNutritionCompany;
+        private System.Windows.Forms.Button btnNutrition;
     }
 }
 

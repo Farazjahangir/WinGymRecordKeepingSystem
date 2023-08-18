@@ -19,10 +19,15 @@ namespace WinGymRecordKeepingSystem
 
         private void MDIParent_Load(object sender, EventArgs e)
         {
-             frmLogin frmLogin = new frmLogin();
-             frmLogin.MdiParent = this;
-             frmLogin.Show();
-             frmLogin.WindowState = FormWindowState.Maximized;
+            // frmLogin frmLogin = new frmLogin();
+            // frmLogin.MdiParent = this;
+            // frmLogin.Show();
+            // frmLogin.WindowState = FormWindowState.Maximized;
+
+            frmNutrition frmNutrition = new frmNutrition();
+            frmNutrition.MdiParent = this;
+            frmNutrition.Show();
+            frmNutrition.WindowState = FormWindowState.Maximized;
         }
 
         private void btnEquipments_Click(object sender, EventArgs e)
@@ -101,5 +106,12 @@ namespace WinGymRecordKeepingSystem
             frmNutitionCompany.WindowState = FormWindowState.Maximized;
         }
 
+        private void btnNutrition_Click(object sender, EventArgs e)
+        {
+            frmNutrition frmNutrition = new frmNutrition();
+            frmNutrition.MdiParent = this;
+            frmNutrition.Show();
+            frmNutrition.WindowState = FormWindowState.Maximized;
+        }
     }
 }
