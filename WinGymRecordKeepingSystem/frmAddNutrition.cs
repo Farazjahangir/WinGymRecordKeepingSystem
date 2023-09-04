@@ -45,7 +45,7 @@ namespace WinGymRecordKeepingSystem
                 {
                     if (nutritionId != null)
                     {
-
+                        updateData();
                     }
                     else
                     {
@@ -57,7 +57,9 @@ namespace WinGymRecordKeepingSystem
                     cmbUsers.SelectedValue = '0';
                     txtName.Text = "";
                     nutritionId = null;
-                } catch(Exception ex)
+                    btnAdd.Text = "Add";
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 } finally
@@ -135,6 +137,7 @@ namespace WinGymRecordKeepingSystem
                 cmbType.DataSource = dt;
                 cmbType.DisplayMember = "NutritionType";
                 cmbType.ValueMember = "NutritionTypeId";
+
             }
             catch (Exception ex)
             {
@@ -180,6 +183,36 @@ namespace WinGymRecordKeepingSystem
             con.Open();
                 cmd.ExecuteNonQuery();
             MessageBox.Show("Nutirion Added");
+        }
+
+        public void loadData(DataGridViewCellCollection cell)
+        {
+            txtName.Text = cell["Name"].Value.ToString();
+            cmbType.SelectedItem = cell["NutritionType"].Value.ToString();
+            cmbCompany.SelectedValue = cell["NutritionCompanyId"].Value.ToString();
+            cmbUsers.SelectedValue = cell["AddedByUserId"].Value.ToString();
+            nutritionId = cell["NutritionId"].Value.ToString();
+            btnAdd.Text = "Update";
+        }
+
+        private void updateData()
+        {
+                string qry = "UPDATE tblNutrition SET " +
+                    "Name=@Name, " +
+                    "NutritionCompany=@NCom, " +
+                    "NutritionType=@NType, " +
+                    "AddedBy=@User " +
+                    "WHERE NutritionId=@ID";
+
+                SqlCommand cmd = new SqlCommand(qry, con);
+                cmd.Parameters.AddWithValue("@Name", txtName.Text);
+                cmd.Parameters.AddWithValue("@NCom", cmbCompany.SelectedValue);
+                cmd.Parameters.AddWithValue("@NType", cmbType.SelectedValue);
+                cmd.Parameters.AddWithValue("@User", cmbUsers.SelectedValue);
+                cmd.Parameters.AddWithValue("@ID", nutritionId);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Nutirion updated");
         }
     }
 }
